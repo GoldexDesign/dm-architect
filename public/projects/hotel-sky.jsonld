@@ -1,0 +1,83 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Project",
+  "name": "Hotel Sky",
+  "description": "Hotel Sky je moderan enterijer smešten u mirnoj zoni Beograda, ususkan između tradicionalnog gradskog tkiva. Projekat je osmišljen sa pažljivo dizajniranim plafonima, elegantnim nameštajem i prirodnim materijalima, što ga čini izuzetnim mestom za boravak.",
+  "location": {
+    "@type": "Place",
+    "address": "Ul. Lomina br.28, Savski venac, Beograd"
+  },
+  "dateCreated": "2017-01-01",
+  "author": {
+    "@type": "Person",
+    "name": "Danijela Mišković",
+    "affiliation": "Studio Structura"
+  },
+  "photographer": "Pavle Kaplanec",
+  "size": {
+    "totalArea": "1300 m2",
+    "receptionArea": "55 m2"
+  },
+  "year": {
+    "design": "2017",
+    "construction": "2017/2018"
+  },
+  "projectType": "Enterijer, Ugostiteljski objekat",
+  "features": [
+    "Glavni hol sa recepcijom",
+    "Geometrijski oblici u dizajnu",
+    "Elegantni plafoni i nameštaj",
+    "Prirodni materijali: mermer, drvo i koža",
+    "Mini restoran sa doručkom",
+    "Sala za sastanke",
+    "Mini SPA centar"
+  ],
+  "accommodation": {
+    "totalRooms": 37,
+    "luxuryRooms": 12,
+    "midRangeRooms": 12,
+    "standardRooms": 13
+  },
+  "participants": [
+    {
+      "name": "Casa",
+      "role": "Staklene pregrade i tuš kabine"
+    },
+    {
+      "name": "Ginko nameštaj",
+      "role": "Sofa u ulaznom holu, restoranske stolice i stolovi"
+    },
+    {
+      "name": "Grantex",
+      "role": "Draperi, zavese, fotelje u sobama i ulaznom holu, klub stolovi"
+    },
+    {
+      "name": "Šumadija granit",
+      "role": "Mermerni podovi u holu, restoran, hodnici i stepenište"
+    },
+    {
+      "name": "SLV Struja",
+      "role": "Rasveta"
+    }
+  ],
+  "image": [
+    "/images/hotel-sky/hotel-sky-bathroom-design-1.jpg",
+    "/images/hotel-sky/hotel-sky-bathroom-design.jpg",
+    "/images/hotel-sky/hotel-sky-bathroom.jpg",
+    "/images/hotel-sky/hotel-sky-front-view.jpg",
+    "/images/hotel-sky/hotel-sky-hallway-lighting-modern-1.jpg",
+    "/images/hotel-sky/hotel-sky-hallway-lighting-modern.jpg",
+    "/images/hotel-sky/hotel-sky-lobby-reception-area.jpg",
+    "/images/hotel-sky/hotel-sky-lobby-reception.jpg",
+    "/images/hotel-sky/hotel-sky-luxury-bedroom-1.jpg",
+    "/images/hotel-sky/hotel-sky-luxury-bedroom-2.jpg",
+    "/images/hotel-sky/hotel-sky-luxury-bedroom.jpg",
+    "/images/hotel-sky/hotel-sky-luxury-room.jpg",
+    "/images/hotel-sky/hotel-sky-modern-hotel-room.jpg",
+    "/images/hotel-sky/hotel-sky-modern-reception.jpg",
+    "/images/hotel-sky/hotel-sky-reception-ambiance.jpg",
+    "/images/hotel-sky/hotel-sky-reception-area.jpg",
+    "/images/hotel-sky/hotel-sky-reception-desk.jpg",
+    "/images/hotel-sky/hotel-sky-room-interior.jpg"
+  ]
+}

@@ -1,0 +1,133 @@
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  border-bottom: 2px solid #ddd;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* LOGO IN THE CENTER */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* NAVIGATION ON THE RIGHT */
+.nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  font-weight: bold;
+  gap: 20px;
+}
+
+.nav ul li {
+  position: relative;
+}
+
+/* ALL MENU BUTTONS - NORMAL CURSOR */
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.nav ul li a:hover {
+  color: #0070f3;
+}
+
+/* DROPDOWN MENU - HIDDEN BY DEFAULT */
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+  list-style: none;
+  z-index: 1000;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  min-width: 150px;
+  text-align: left;
+}
+
+/* SHOW DROPDOWN ONLY WHEN HOVERING PROJECTS */
+.dropdown:hover .dropdownMenu {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ALIGN DROPDOWN TO THE LEFT */
+.dropdownMenu li {
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dropdownMenu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+}
+
+.dropdownMenu li a:hover {
+  background: #f0f0f0;
+  color: #0070f3;
+}
+
+/* REMOVE ALWAYS VISIBLE CATEGORIES */
+.nav ul > .dropdownMenu {
+  display: none !important;
+}
+
+/* MOBILE MENU - HIDDEN ON DESKTOP */
+.menuToggle {
+  display: none;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+}
