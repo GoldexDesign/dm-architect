@@ -23,32 +23,24 @@ export default function Header() {
         <ul>
           {/* Projects with working link and dropdown */}
           <li className={styles.dropdown}>
-            <Link href="/projects">
-              <a className={styles.menuButton}>Projects</a>
+            <Link href="/projects" className={styles.menuButton}>
+              Projects
             </Link>
             <ul className={styles.dropdownMenu}>
               <li>
-                <Link href="/projects/residential">
-                  <a>Residential</a>
-                </Link>
+                <Link href="/projects/residential">Residential</Link>
               </li>
               <li>
-                <Link href="/projects/hotels">
-                  <a>Hotels</a>
-                </Link>
+                <Link href="/projects/hotels">Hotels</Link>
               </li>
               <li>
-                <Link href="/projects/retail">
-                  <a>Retail</a>
-                </Link>
+                <Link href="/projects/retail">Retail</Link>
               </li>
             </ul>
           </li>
           {/* About Me */}
           <li>
-            <Link href="/aboutme">
-              <a>About Me</a>
-            </Link>
+            <Link href="/aboutme">About Me</Link>
           </li>
         </ul>
       </nav>
