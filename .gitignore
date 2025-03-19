@@ -1,7 +1,6 @@
 # Ignore node_modules and Next.js build files
 node_modules/
-.next/
-out/
+
 
 # Logs and cache
 npm-debug.log*
