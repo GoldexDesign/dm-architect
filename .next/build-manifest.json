@@ -1,37 +1,61 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-42372ed130431b0a.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
+  "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/XLJroi7Vz5bIW73KrC6ec/_buildManifest.js",
+    "static/XLJroi7Vz5bIW73KrC6ec/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "rootMainFilesTree": {},
   "pages": {
     "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/webpack-3f5af68168261408.js",
+      "static/chunks/framework-b8ed9b642a1d405a.js",
+      "static/chunks/main-7b22b75aa92f37a4.js",
+      "static/css/ef8cef38e0e119e7.css",
+      "static/chunks/pages/index-4eeb867b84b6d5d2.js"
     ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-3f5af68168261408.js",
+      "static/chunks/framework-b8ed9b642a1d405a.js",
+      "static/chunks/main-7b22b75aa92f37a4.js",
+      "static/css/43480f27236c7af6.css",
+      "static/chunks/pages/_app-bc39e583e128c2fe.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/webpack-3f5af68168261408.js",
+      "static/chunks/framework-b8ed9b642a1d405a.js",
+      "static/chunks/main-7b22b75aa92f37a4.js",
+      "static/chunks/pages/_error-b41dbd85229d9331.js"
+    ],
+    "/aboutme": [
+      "static/chunks/webpack-3f5af68168261408.js",
+      "static/chunks/framework-b8ed9b642a1d405a.js",
+      "static/chunks/main-7b22b75aa92f37a4.js",
+      "static/chunks/pages/aboutme-991d0095377d0eb0.js"
+    ],
+    "/hotels": [
+      "static/chunks/webpack-3f5af68168261408.js",
+      "static/chunks/framework-b8ed9b642a1d405a.js",
+      "static/chunks/main-7b22b75aa92f37a4.js",
+      "static/css/ba0082bb04d1f50e.css",
+      "static/chunks/pages/hotels-f7b1f4e1acd36601.js"
     ],
     "/projects": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/projects.js"
+      "static/chunks/webpack-3f5af68168261408.js",
+      "static/chunks/framework-b8ed9b642a1d405a.js",
+      "static/chunks/main-7b22b75aa92f37a4.js",
+      "static/css/3007e8fedc8ff48c.css",
+      "static/chunks/pages/projects-e481b275c5c31343.js"
+    ],
+    "/projects/[id]": [
+      "static/chunks/webpack-3f5af68168261408.js",
+      "static/chunks/framework-b8ed9b642a1d405a.js",
+      "static/chunks/main-7b22b75aa92f37a4.js",
+      "static/chunks/pages/projects/[id]-93fa6d0ca20113ca.js"
     ]
   },
   "ampFirstPages": []
