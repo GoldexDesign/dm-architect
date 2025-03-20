@@ -1,10 +1,10 @@
 {
-  "/hotels": "pages/hotels.html",
-  "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
-  "/projects/[id]": "pages/projects/[id].html",
+  "/_error": "pages/_error.js",
   "/": "pages/index.html",
   "/projects": "pages/projects.html",
+  "/projects/[id]": "pages/projects/[id].html",
+  "/hotels": "pages/hotels.html",
   "/aboutme": "pages/aboutme.html",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"

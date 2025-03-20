@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/index.module.css";
+import Footer from "../components/Footer"; // Import Footer
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
@@ -21,7 +22,10 @@ export default function Home() {
         const formattedProjects = data.projects.map((project) => ({
           id: project.id,
           name: project.name,
-          image: project.image.length > 0 ? project.image[0] : "", // Load first image dynamically
+          image:
+            project.image.length > 0
+              ? project.image[0]
+              : "https://via.placeholder.com/300x200?text=No+Image", // Load first image dynamically with web placeholder
         }));
         setProjects(formattedProjects);
       })
@@ -79,9 +83,6 @@ export default function Home() {
           </p>
         </section>
       </main>
-      <footer className={styles.footer}>
-        © 2025 DM Arhitekt - All Rights Reserved
-      </footer>
     </div>
   );
 }
