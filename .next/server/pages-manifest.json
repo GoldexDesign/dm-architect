@@ -1,8 +1,11 @@
 {
+  "/aboutme": "pages/aboutme.html",
   "/_app": "pages/_app.js",
+  "/": "pages/index.html",
+  "/projects/[id]": "pages/projects/[id].html",
+  "/projects": "pages/projects.html",
   "/_error": "pages/_error.js",
+  "/hotels": "pages/hotels.html",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/projects": "pages/projects.js",
-  "/projects/[id]": "pages/projects/[id].js"
+  "/404": "pages/404.html"
 }
