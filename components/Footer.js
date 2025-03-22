@@ -1,18 +1,22 @@
 import React from "react";
-import Link from "next/link";
 import styles from "../styles/footer.module.css";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <span>© 2025 DM Arhitekt - All Rights Reserved</span>
-      <Link
-        href="https://www.instagram.com/dm_architekt/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Follow us on Instagram
-      </Link>
+      <div className={styles.footerContent}>
+        <p>2025 © DM ARCHITECT</p>
+        <p>Belgrade, Serbia</p>
+        <p>EMAIL@email.com</p>
+        <a
+          href="https://www.instagram.com/dm_architekt/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.link}
+        >
+          Instagram
+        </a>
+      </div>
     </footer>
   );
 }

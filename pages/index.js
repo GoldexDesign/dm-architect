@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/index.module.css";
-import Footer from "../components/Footer"; // Import Footer
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
@@ -16,16 +16,16 @@ export default function Home() {
         return res.json();
       })
       .then((data) => {
-        if (!data || !data.projects) {
+        if (!data || !Array.isArray(data.projects)) {
           throw new Error("Invalid JSON structure or empty projects list");
         }
         const formattedProjects = data.projects.map((project) => ({
           id: project.id,
           name: project.name,
           image:
-            project.image.length > 0
+            Array.isArray(project.image) && project.image.length > 0
               ? project.image[0]
-              : "https://via.placeholder.com/300x200?text=No+Image", // Load first image dynamically with web placeholder
+              : "https://via.placeholder.com/300x200?text=No+Image",
         }));
         setProjects(formattedProjects);
       })
@@ -51,7 +51,7 @@ export default function Home() {
           }}
         />
       </Head>
-      <header className={styles.header}>DM Arhitekt</header>
+
       <main className={styles.main}>
         <h1 className={styles.title}>Our Projects</h1>
         <div className={styles.projectsGrid}>
@@ -72,6 +72,7 @@ export default function Home() {
             <p>Loading projects...</p>
           )}
         </div>
+
         <section className={styles.description}>
           <h2>About DM Arhitekt</h2>
           <p>

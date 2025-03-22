@@ -1,4 +1,3 @@
-/* Footer Styles */
 .footer {
   position: fixed;
   bottom: 0;
@@ -7,18 +6,30 @@
   background: transparent;
   color: black;
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
   padding: 10px 20px;
   font-size: 1rem;
+  z-index: 1000;
 }
 
-.footer a {
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: justify;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerContent p,
+.footerContent a {
+  flex: 1;
+  min-width: 150px;
+  margin: 5px 10px;
   color: black;
-  font-weight: bold;
   text-decoration: none;
 }
 
-.footer a:hover {
+.footerContent a:hover {
   text-decoration: underline;
 }

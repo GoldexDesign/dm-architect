@@ -1,5 +1,14 @@
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "projects": []
+  "projects": [
+    {
+      "@type": "Project",
+      "id": "hotel-sky",
+      "name": "Hotel Sky",
+      "image": [
+        "/images/hotel-sky/hotel-sky-front-view.jpg"
+      ]
+    }
+  ]
 }
