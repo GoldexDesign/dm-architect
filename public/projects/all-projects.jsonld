@@ -9,6 +9,22 @@
       "image": [
         "/images/hotel-sky/hotel-sky-front-view.jpg"
       ]
+    },
+    {
+      "@type": "Project",
+      "id": "la-botilleria",
+      "name": "La Botilleria",
+      "image": [
+        "/images/la-botilleria/la-botilleria-01.jpg"
+      ]
+    },
+    {
+      "@type": "Project",
+      "id": "japanese-apartment",
+      "name": "Japanese-Style Apartment",
+      "image": [
+        "/images/japanese-apartment/japanese-apartment-01.jpg"
+      ]
     }
   ]
 }

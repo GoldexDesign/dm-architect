@@ -1,50 +1,68 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import styles from "../styles/hotels.module.css";
+import styles from "../styles/index.module.css";
 
 export default function Hotels() {
-  const [hotels, setHotels] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("/projects/hotels.jsonld")
-      .then((res) => res.json())
-      .then((data) => setHotels([data])) // Load single project as an array
-      .catch((err) => console.error("Error loading hotels data:", err));
+    const projectFiles = ["hotel-sky", "la-botilleria"];
+
+    Promise.all(
+      projectFiles.map((id) =>
+        fetch(`/projects/${id}.jsonld`).then((res) => {
+          if (!res.ok) throw new Error(`Failed to load ${id}`);
+          return res.json();
+        })
+      )
+    )
+      .then((allProjects) => {
+        const filtered = allProjects.filter((project) => {
+          const type = project.projectType?.toLowerCase() || "";
+          const tags = type.split(",").map((tag) => tag.trim());
+          return tags.includes("hotel");
+        });
+        setProjects(filtered);
+      })
+      .catch((err) => console.error("Error loading hotel projects:", err));
   }, []);
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Hotels - DM Arhitekt</title>
+        <title>Hotel Projects - DM Arhitekt</title>
         <meta
           name="description"
-          content="Explore our hotel projects designed by DM Arhitekt."
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(hotels) }}
+          content="Explore hotel interior projects by DM Arhitekt. Sophisticated, functional, and modern hospitality designs."
         />
       </Head>
-      <h1 className={styles.title}>Hotel Projects</h1>
-      <div className={styles.projectsGrid}>
-        {hotels.length > 0 ? (
-          hotels.map((hotel) => (
-            <div key={hotel.name} className={styles.projectCard}>
-              <Link href={`/projects/hotel-sky`}>
-                <img
-                  src={hotel.image[0]}
-                  alt={hotel.name}
-                  className={styles.projectImage}
-                />
-              </Link>
-              <h2 className={styles.projectName}>{hotel.name}</h2>
-            </div>
-          ))
-        ) : (
-          <p>Loading hotel projects...</p>
-        )}
-      </div>
+
+      <main className={styles.main}>
+        <h1 className={styles.title}>Hotel Projects</h1>
+        <div className={styles.projectsGrid}>
+          {projects.length > 0 ? (
+            projects.map((project) => (
+              <div key={project.id} className={styles.projectCard}>
+                <Link href={`/projects/${project.id}`}>
+                  <img
+                    src={
+                      Array.isArray(project.image) && project.image.length > 0
+                        ? project.image[0]
+                        : "https://via.placeholder.com/300x200?text=No+Image"
+                    }
+                    alt={project.name}
+                    className={styles.projectImage}
+                  />
+                </Link>
+                <h2 className={styles.projectName}>{project.name}</h2>
+              </div>
+            ))
+          ) : (
+            <p>No hotel projects found.</p>
+          )}
+        </div>
+      </main>
     </div>
   );
 }

@@ -28,13 +28,13 @@ export default function Header() {
             </Link>
             <ul className={styles.dropdownMenu}>
               <li>
-                <Link href="/projects/residential">Residential</Link>
+                <Link href="/residential">Residential</Link>
               </li>
               <li>
-                <Link href="/projects/hotels">Hotels</Link>
+                <Link href="/hotels">Hotels</Link>
               </li>
               <li>
-                <Link href="/projects/retail">Retail</Link>
+                <Link href="/retail">Retail</Link>
               </li>
             </ul>
           </li>

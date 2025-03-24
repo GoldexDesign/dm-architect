@@ -1,0 +1,60 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Project",
+  "id": "japanese-apartment",
+  "name": "Japanese-Style Apartment",
+  "projectType": "Residential",
+  "description": "A serene Japanese-style apartment designed by DM Arhitekt. This 58m² Belgrade apartment blends natural materials, minimalist wood elements, and traditional Japanese aesthetics. The project features a harmonious balance between architecture and furniture, complemented by soft lighting and a calm color palette.",
+  "location": {
+    "@type": "Place",
+    "address": "Belgrade, Serbia"
+  },
+  "size": {
+    "totalArea": "58 m²"
+  },
+  "year": {
+    "design": "2022",
+    "construction": "2023"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "DM Arhitekt",
+    "affiliation": "DM Arhitekt Studio"
+  },
+  "photographer": "Relja Ivanić",
+  "features": [
+    "Traditional Japanese woodwork elements",
+    "Sliding wall partitions",
+    "Custom-designed wooden furniture",
+    "Minimalist lighting solutions",
+    "Earth-tone color palette",
+    "Integrated dining and kitchen zones",
+    "Hand-painted cherry blossom mural"
+  ],
+  "participants": [
+    {
+      "name": "DM Arhitekt",
+      "role": "Interior Design"
+    }
+  ],
+  "image": [
+    "/images/japanese-apartment/japanese-apartment-01.jpg",
+    "/images/japanese-apartment/japanese-apartment-02.jpg",
+    "/images/japanese-apartment/japanese-apartment-03.jpg",
+    "/images/japanese-apartment/japanese-apartment-04.jpg",
+    "/images/japanese-apartment/japanese-apartment-05.jpg",
+    "/images/japanese-apartment/japanese-apartment-06.jpg",
+    "/images/japanese-apartment/japanese-apartment-07.jpg",
+    "/images/japanese-apartment/japanese-apartment-08.jpg",
+    "/images/japanese-apartment/japanese-apartment-09.jpg",
+    "/images/japanese-apartment/japanese-apartment-10.jpg",
+    "/images/japanese-apartment/japanese-apartment-11.jpg",
+    "/images/japanese-apartment/japanese-apartment-12.jpg",
+    "/images/japanese-apartment/japanese-apartment-13.jpg",
+    "/images/japanese-apartment/japanese-apartment-14.jpg",
+    "/images/japanese-apartment/japanese-apartment-15.jpg",
+    "/images/japanese-apartment/japanese-apartment-42.jpg",
+    "/images/japanese-apartment/japanese-apartment-43.jpg",
+    "/images/japanese-apartment/japanese-apartment-44.jpg"
+  ]
+}

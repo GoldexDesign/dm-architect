@@ -1,6 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Project",
+  "id": "hotel-sky",
   "name": "Hotel Sky",
   "description": "Hotel Sky je moderan enterijer smešten u mirnoj zoni Beograda, ususkan između tradicionalnog gradskog tkiva. Projekat je osmišljen sa pažljivo dizajniranim plafonima, elegantnim nameštajem i prirodnim materijalima, što ga čini izuzetnim mestom za boravak.",
   "location": {
@@ -22,7 +23,7 @@
     "design": "2017",
     "construction": "2017/2018"
   },
-  "projectType": "Enterijer, Ugostiteljski objekat",
+  "projectType": "Hotel, Enterijer, Ugostiteljski objekat",
   "features": [
     "Glavni hol sa recepcijom",
     "Geometrijski oblici u dizajnu",
