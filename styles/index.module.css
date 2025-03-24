@@ -61,10 +61,31 @@
   max-width: 100%;
 }
 
-.footer {
-  margin-top: 50px;
-  padding: 10px 10px;
-  background: #f8f8f8;
-  border-top: 2px solid #ddd;
-  max-width: 100%;
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectName {
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .description {
+    padding: 10px;
+  }
 }

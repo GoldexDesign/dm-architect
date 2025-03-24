@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/header.module.css";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className={styles.header}>
       {/* Logo in the center */}
       <div className={styles.logo}>
-        <Link href="/">
+        <Link href="/" onClick={closeMenu}>
           <Image
             src="/images/DM_logo-removebg.png"
             alt="DM Arhitekt Logo"
@@ -18,29 +28,44 @@ export default function Header() {
         </Link>
       </div>
 
+      {/* Hamburger icon (mobile) */}
+      <div className={styles.menuToggle} onClick={toggleMenu}>
+        ☰
+      </div>
+
       {/* Navigation on the right */}
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
         <ul>
-          {/* Projects with working link and dropdown */}
           <li className={styles.dropdown}>
-            <Link href="/projects" className={styles.menuButton}>
+            <Link
+              href="/projects"
+              className={styles.menuButton}
+              onClick={closeMenu}
+            >
               Projects
             </Link>
             <ul className={styles.dropdownMenu}>
               <li>
-                <Link href="/residential">Residential</Link>
+                <Link href="/residential" onClick={closeMenu}>
+                  Residential
+                </Link>
               </li>
               <li>
-                <Link href="/hotels">Hotels</Link>
+                <Link href="/hotels" onClick={closeMenu}>
+                  Hotels
+                </Link>
               </li>
               <li>
-                <Link href="/retail">Retail</Link>
+                <Link href="/retail" onClick={closeMenu}>
+                  Retail
+                </Link>
               </li>
             </ul>
           </li>
-          {/* About Me */}
           <li>
-            <Link href="/aboutme">About Me</Link>
+            <Link href="/aboutme" onClick={closeMenu}>
+              About Me
+            </Link>
           </li>
         </ul>
       </nav>

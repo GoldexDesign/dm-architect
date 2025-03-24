@@ -1,14 +1,14 @@
 {
-  "/_app": "pages/_app.js",
   "/aboutme": "pages/aboutme.html",
+  "/_app": "pages/_app.js",
   "/hotels": "pages/hotels.html",
   "/": "pages/index.html",
   "/projects": "pages/projects.html",
   "/projects/[id]": "pages/projects/[id].html",
   "/residential": "pages/residential.html",
-  "/retail": "pages/retail.html",
   "/_error": "pages/_error.js",
   "/categories/[category]": "pages/categories/[category].html",
+  "/retail": "pages/retail.html",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }
