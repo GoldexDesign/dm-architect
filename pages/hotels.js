@@ -7,25 +7,35 @@ export default function Hotels() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    const projectFiles = ["hotel-sky", "la-botilleria"];
+    // This should match all project filenames
+    const projectFiles = [
+      "hotel-sky",
+      "la-botilleria",
+      "japanese-apartment",
+      "fimas-showroom",
+    ];
 
     Promise.all(
       projectFiles.map((id) =>
-        fetch(`/projects/${id}.jsonld`).then((res) => {
-          if (!res.ok) throw new Error(`Failed to load ${id}`);
-          return res.json();
-        })
+        fetch(`/projects/${id}.jsonld`)
+          .then((res) => {
+            if (!res.ok) throw new Error(`Failed to load ${id}`);
+            return res.json();
+          })
+          .catch((err) => {
+            console.error(`Error loading project "${id}":`, err);
+            return null;
+          })
       )
-    )
-      .then((allProjects) => {
-        const filtered = allProjects.filter((project) => {
-          const type = project.projectType?.toLowerCase() || "";
-          const tags = type.split(",").map((tag) => tag.trim());
-          return tags.includes("hotel");
+    ).then((allProjects) => {
+      const filtered = allProjects
+        .filter((project) => project && project.projectType)
+        .filter((project) => {
+          const type = project.projectType.toLowerCase();
+          return type.includes("hotel");
         });
-        setProjects(filtered);
-      })
-      .catch((err) => console.error("Error loading hotel projects:", err));
+      setProjects(filtered);
+    });
   }, []);
 
   return (

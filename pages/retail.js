@@ -7,23 +7,34 @@ export default function Retail() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    const projectFiles = ["hotel-sky", "la-botilleria"];
+    const projectFiles = [
+      "hotel-sky",
+      "la-botilleria",
+      "japanese-apartment",
+      "fimas-showroom",
+    ];
 
     Promise.all(
       projectFiles.map((id) =>
-        fetch(`/projects/${id}.jsonld`).then((res) => {
-          if (!res.ok) throw new Error(`Failed to load ${id}`);
-          return res.json();
-        })
+        fetch(`/projects/${id}.jsonld`)
+          .then((res) => {
+            if (!res.ok) throw new Error(`Failed to load ${id}`);
+            return res.json();
+          })
+          .catch((err) => {
+            console.error(`Error loading project "${id}":`, err);
+            return null;
+          })
       )
-    )
-      .then((allProjects) => {
-        const filtered = allProjects.filter((project) =>
-          project.projectType.toLowerCase().includes("retail")
-        );
-        setProjects(filtered);
-      })
-      .catch((err) => console.error("Error loading retail projects:", err));
+    ).then((allProjects) => {
+      const filtered = allProjects
+        .filter((project) => project && project.projectType)
+        .filter((project) => {
+          const type = project.projectType.toLowerCase();
+          return type.includes("retail");
+        });
+      setProjects(filtered);
+    });
   }, []);
 
   return (
@@ -44,7 +55,11 @@ export default function Retail() {
               <div key={project.id} className={styles.projectCard}>
                 <Link href={`/projects/${project.id}`}>
                   <img
-                    src={project.image[0]}
+                    src={
+                      Array.isArray(project.image) && project.image.length > 0
+                        ? project.image[0]
+                        : "https://via.placeholder.com/300x200?text=No+Image"
+                    }
                     alt={project.name}
                     className={styles.projectImage}
                   />

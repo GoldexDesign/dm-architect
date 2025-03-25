@@ -25,6 +25,14 @@
       "image": [
         "/images/japanese-apartment/japanese-apartment-01.jpg"
       ]
+    },
+    {
+      "@type": "Project",
+      "id": "fimas-showroom",
+      "name": "Fimas Showroom",
+      "image": [
+        "/images/fimas-showroom/fimas-showroom-01.jpg"
+      ]
     }
   ]
 }

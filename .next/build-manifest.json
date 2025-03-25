@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/jhc_sXNuBPv3AqrlhT8Fq/_buildManifest.js",
-    "static/jhc_sXNuBPv3AqrlhT8Fq/_ssgManifest.js"
+    "static/bcnt-EfxPGvvrXyEojVrK/_buildManifest.js",
+    "static/bcnt-EfxPGvvrXyEojVrK/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "rootMainFilesTree": {},
@@ -49,7 +49,7 @@
       "static/chunks/framework-b8ed9b642a1d405a.js",
       "static/chunks/main-7b22b75aa92f37a4.js",
       "static/css/ae49c1fa6def5427.css",
-      "static/chunks/pages/hotels-f5c2c1d33c8ef9cd.js"
+      "static/chunks/pages/hotels-db5a05dadfdc006e.js"
     ],
     "/projects": [
       "static/chunks/webpack-3f5af68168261408.js",
@@ -69,14 +69,14 @@
       "static/chunks/framework-b8ed9b642a1d405a.js",
       "static/chunks/main-7b22b75aa92f37a4.js",
       "static/css/ae49c1fa6def5427.css",
-      "static/chunks/pages/residential-e9c438d03b0bdde3.js"
+      "static/chunks/pages/residential-004d80c258201704.js"
     ],
     "/retail": [
       "static/chunks/webpack-3f5af68168261408.js",
       "static/chunks/framework-b8ed9b642a1d405a.js",
       "static/chunks/main-7b22b75aa92f37a4.js",
       "static/css/ae49c1fa6def5427.css",
-      "static/chunks/pages/retail-8e506d7c156f29e4.js"
+      "static/chunks/pages/retail-00ee63012d39866e.js"
     ]
   },
   "ampFirstPages": []
