@@ -20,7 +20,7 @@ export default function Header() {
       <div className={styles.logo}>
         <Link href="/" onClick={closeMenu}>
           <Image
-            src="/images/DM_logo-removebg.png"
+            src="/images/DM_logo.svg"
             alt="DM Arhitekt Logo"
             width={100}
             height={50}

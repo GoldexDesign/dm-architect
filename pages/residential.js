@@ -7,34 +7,36 @@ export default function Residential() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    const projectFiles = [
-      "hotel-sky",
-      "la-botilleria",
-      "japanese-apartment",
-      "fimas-showroom",
-    ];
+    fetch("/projects/all-projects.jsonld")
+      .then((res) => res.json())
+      .then((data) => {
+        const allIds = data.projects.map((p) => p.id);
 
-    Promise.all(
-      projectFiles.map((id) =>
-        fetch(`/projects/${id}.jsonld`)
-          .then((res) => {
-            if (!res.ok) throw new Error(`Failed to load ${id}`);
-            return res.json();
-          })
-          .catch((err) => {
-            console.error(`Error loading project "${id}":`, err);
-            return null;
-          })
-      )
-    ).then((allProjects) => {
-      const filtered = allProjects
-        .filter((project) => project && project.projectType)
-        .filter((project) => {
-          const type = project.projectType.toLowerCase();
-          return type.includes("residential");
-        });
-      setProjects(filtered);
-    });
+        return Promise.all(
+          allIds.map((id) =>
+            fetch(`/projects/${id}.jsonld`)
+              .then((res) => {
+                if (!res.ok) throw new Error(`Failed to load ${id}`);
+                return res.json();
+              })
+              .catch((err) => {
+                console.error(`Error loading project "${id}":`, err);
+                return null;
+              })
+          )
+        );
+      })
+      .then((allProjects) => {
+        const filtered = allProjects
+          .filter((project) => project && project.projectType)
+          .filter((project) => {
+            const type = project.projectType.toLowerCase();
+            return type.includes("residential");
+          });
+
+        setProjects(filtered);
+      })
+      .catch((err) => console.error("Error loading all-projects.jsonld:", err));
   }, []);
 
   return (

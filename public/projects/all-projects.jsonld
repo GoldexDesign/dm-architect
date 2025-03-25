@@ -33,6 +33,13 @@
       "image": [
         "/images/fimas-showroom/fimas-showroom-01.jpg"
       ]
+    },
+    {
+      "@type": "Project",
+      "id": "scavolini-store",
+      "name": "Scavolini Store",
+      "image": "/images/scavolini-store/scavolini-store-01.jpg",
+      "projectType": "retail"
     }
   ]
 }

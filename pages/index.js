@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/index.module.css";
-import Footer from "../components/Footer";
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
