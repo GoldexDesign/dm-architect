@@ -15,7 +15,8 @@ export default function Projects() {
       </Head>
       <h1 className={styles.title}>Our Projects</h1>
       <p className={styles.text}>
-        Discover our latest work in interior design across different sectors.
+        Smisli kako cemo ofu stranicu. Ja bih ovako recimo:
+        https://freyaarchitects.com/projects/ da imam gore all i filtere
       </p>
       <ul className={styles.projectList}>
         <li>

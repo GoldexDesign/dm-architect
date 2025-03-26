@@ -1,13 +1,13 @@
 {
   "/_app": "pages/_app.js",
-  "/aboutme": "pages/aboutme.html",
   "/hotels": "pages/hotels.html",
+  "/aboutme": "pages/aboutme.html",
   "/": "pages/index.html",
-  "/categories/[category]": "pages/categories/[category].html",
   "/projects": "pages/projects.html",
   "/projects/[id]": "pages/projects/[id].html",
-  "/retail": "pages/retail.html",
+  "/categories/[category]": "pages/categories/[category].html",
   "/_error": "pages/_error.js",
+  "/retail": "pages/retail.html",
   "/residential": "pages/residential.html",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"

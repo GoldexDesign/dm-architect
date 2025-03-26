@@ -122,8 +122,10 @@
     background: white;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    padding: 10px;
+
     z-index: 999;
+
+    max-width: 300px;
   }
 
   .nav.open {
@@ -132,11 +134,18 @@
 
   .nav ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 0;
   }
 
-  .nav ul li {
-    text-align: left;
+  .nav ul li,
+  .dropdownMenu li {
+    width: 100%;
+  }
+
+  .nav ul li a,
+  .dropdownMenu li a {
+    display: block;
+    width: 100%;
   }
 
   .dropdownMenu {
@@ -146,9 +155,10 @@
     opacity: 1;
     visibility: visible;
     background: none;
+    width: 100%;
   }
 
-  .dropdownMenu li {
-    padding: 5px 0;
+  .dropdownMenu li a {
+    background: none;
   }
 }

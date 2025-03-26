@@ -38,8 +38,9 @@
       "@type": "Project",
       "id": "scavolini-store",
       "name": "Scavolini Store",
-      "image": "/images/scavolini-store/scavolini-store-01.jpg",
-      "projectType": "retail"
+      "image": [
+        "/images/scavolini-store/scavolini-store-01.jpg"
+      ]
     }
   ]
 }

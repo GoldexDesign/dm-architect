@@ -51,47 +51,6 @@ footer {
   grid-row: span 2;
 }
 
-/* DROPDOWN MENU - SAKRIVEN PO DEFAULTU */
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  border: 1px solid #ddd;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  padding: 5px 0;
-  display: none;
-  min-width: 150px;
-  flex-direction: column;
-  z-index: 999;
-}
-
-/* PRIKAZUJE MENI SAMO NA HOVER */
-.dropdown:hover .dropdown-menu {
-  display: flex;
-  flex-direction: column;
-}
-
-/* STIL ZA PADAJUĆE KATEGORIJE */
-.dropdown-menu li {
-  padding: 10px;
-  text-align: left;
-  white-space: nowrap;
-}
-
-.dropdown-menu li a {
-  text-decoration: none;
-  color: black;
-  display: block;
-  width: 100%;
-}
-
-.dropdown-menu li a:hover {
-  background: #f0f0f0;
-  color: #0070f3;
-}
-
 /* RESPONSIVNOST */
 @media (max-width: 768px) {
   .container {
