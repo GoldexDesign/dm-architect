@@ -1,8 +1,16 @@
-/* FONT-FACE: Custom font za ceo sajt */
+/* FONT-FACE: Custom font Kessler */
 @font-face {
   font-family: "KesslerSuperDisplay";
   src: url("/fonts/kesslersuperdisplay-regular-TRIAL-BF657264480a888.otf")
     format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FONT-FACE: Fallback font Crimson Text LOCAL */
+@font-face {
+  font-family: "CrimsonTextLocal";
+  src: url("/fonts/CrimsonText-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "KesslerSuperDisplay", "Crimson Text", serif;
+  font-family: "KesslerSuperDisplay", "CrimsonTextLocal", serif;
   font-weight: normal !important;
 }
 
@@ -39,7 +47,7 @@ label,
 input,
 textarea {
   font-weight: normal !important;
-  font-family: "KesslerSuperDisplay", "Crimson Text", serif !important;
+  font-family: "KesslerSuperDisplay", "CrimsonTextLocal", serif !important;
 }
 
 /* GLAVNI KONTEJNER */
@@ -101,15 +109,16 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  /* ✅ Fix za fallback bold na mobilnim browserima */
+  /* ✅ Fix za bold fallback na mobilnim browserima */
   body {
-    font-family: "KesslerSuperDisplay", "Crimson Text", serif !important;
+    font-family: "KesslerSuperDisplay", "CrimsonTextLocal", serif !important;
     font-weight: 400 !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 }
 
+/* GLOBAL BODY FIX ZA MOBILNI ZOOM PROBLEM */
 body,
 html {
   width: 100%;
