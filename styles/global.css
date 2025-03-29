@@ -78,6 +78,11 @@ footer {
   font-weight: normal;
 }
 
+/* ✅ UJEDNAČENA BOJA TEKSTA KROZ SVE */
+body {
+  color: rgba(0, 0, 0, 0.72); /* svetlija crna za usklađen ton sa Kessler */
+}
+
 /* GALERIJA SLIKA */
 .gallery {
   display: grid;
@@ -115,6 +120,7 @@ footer {
     font-weight: 400 !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: rgba(0, 0, 0, 0.72); /* osiguranje da i mobilni koristi istu boju */
   }
 }
 

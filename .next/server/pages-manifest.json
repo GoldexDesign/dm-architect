@@ -7,8 +7,8 @@
   "/hotels": "pages/hotels.html",
   "/": "pages/index.html",
   "/projects": "pages/projects.html",
-  "/residential": "pages/residential.html",
   "/projects/[id]": "pages/projects/[id].html",
+  "/residential": "pages/residential.html",
   "/retail": "pages/retail.html",
   "/404": "pages/404.html"
 }
