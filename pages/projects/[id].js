@@ -32,7 +32,13 @@ export default function ProjectPage() {
   }
 
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{
+        fontFamily: "KesslerSuperDisplay, sans-serif",
+        fontWeight: "normal",
+      }}
+    >
       <Head>
         <title>{projectData.name} - DM Arhitekt</title>
         <meta name="description" content={projectData.description} />

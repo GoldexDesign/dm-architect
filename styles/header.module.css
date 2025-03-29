@@ -138,6 +138,10 @@
 
   .nav.open {
     display: flex;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    left: auto;
   }
 
   .nav ul {
