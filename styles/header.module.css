@@ -3,9 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 20px;
+  padding: 30px 10px;
   background: white;
-  border-bottom: 2px solid #ddd;
   position: sticky;
   top: 0;
   width: 100%;
@@ -25,6 +24,12 @@
   z-index: 999;
 }
 
+.logo img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* NAVIGATION ON THE RIGHT */
 .nav {
   margin-left: auto;
@@ -36,7 +41,7 @@
   list-style: none;
   display: flex;
   font-weight: bold;
-  gap: 20px;
+  gap: 10px;
   margin: 0;
   padding: 0;
 }
@@ -49,12 +54,18 @@
   text-decoration: none;
   color: black;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 5px 5px;
   cursor: pointer;
 }
 
 .nav ul li a:hover {
-  color: #0070f3;
+  color: black;
+  background-color: #dcdcdc; /* ✅ svetlo siva hover boja */
+}
+
+/* ✅ Razmak između Projects i About */
+.nav ul li.about {
+  margin-left: 25px;
 }
 
 /* DROPDOWN MENU */
@@ -64,15 +75,14 @@
   top: 100%;
   left: 0;
   background: white;
-  padding: 10px;
-  border: 1px solid #ddd;
+
   list-style: none;
   z-index: 1000;
   flex-direction: column;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  min-width: 150px;
+  min-width: 10px;
   text-align: left;
 }
 
@@ -83,7 +93,6 @@
 }
 
 .dropdownMenu li {
-  padding: 10px;
   white-space: nowrap;
 }
 
@@ -92,11 +101,12 @@
   color: black;
   display: block;
   width: 100%;
+  padding: 10px 15px;
 }
 
 .dropdownMenu li a:hover {
-  background: #f0f0f0;
-  color: #0070f3;
+  background: #dcdcdc;
+  color: black;
 }
 
 /* MOBILE STYLES */
@@ -122,9 +132,7 @@
     background: white;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-
     z-index: 999;
-
     max-width: 300px;
   }
 
@@ -160,5 +168,9 @@
 
   .dropdownMenu li a {
     background: none;
+  }
+
+  .logo img {
+    height: 105px;
   }
 }

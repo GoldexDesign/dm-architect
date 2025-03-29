@@ -62,9 +62,9 @@ export default function Header() {
               </li>
             </ul>
           </li>
-          <li>
-            <Link href="/aboutme" onClick={closeMenu}>
-              About Me
+          <li className={styles.about}>
+            <Link href="/about" onClick={closeMenu}>
+              About
             </Link>
           </li>
         </ul>

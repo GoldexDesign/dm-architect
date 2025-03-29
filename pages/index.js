@@ -52,7 +52,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Our Projects</h1>
         <div className={styles.projectsGrid}>
           {projects.length > 0 ? (
             projects.map((project) => (

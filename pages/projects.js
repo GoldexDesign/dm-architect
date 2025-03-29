@@ -13,7 +13,7 @@ export default function Projects() {
           content="Explore the latest projects by DM Arhitekt, including residential, retail, and hotel designs."
         />
       </Head>
-      <h1 className={styles.title}>Our Projects</h1>
+      <h1 className={styles.title}>Projects</h1>
       <p className={styles.text}>
         Smisli kako cemo ofu stranicu. Ja bih ovako recimo:
         https://freyaarchitects.com/projects/ da imam gore all i filtere

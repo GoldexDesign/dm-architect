@@ -1,17 +1,17 @@
 import React from "react";
 import Head from "next/head";
 
-export default function AboutMe() {
+export default function About() {
   return (
     <div className="container">
       <Head>
-        <title>About Me - DM Arhitekt</title>
+        <title>About - DM Arhitekt</title>
         <meta
           name="description"
           content="Learn more about DM Arhitekt, our philosophy, and our projects."
         />
       </Head>
-      <h1>About Me</h1>
+      <h1>About</h1>
       <p>
         Welcome to DM Arhitekt! We are a design studio specializing in unique
         and original interior spaces. Our approach blends creativity,

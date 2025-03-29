@@ -39,10 +39,10 @@
       "namedRegex": "^/(?:/)?$"
     },
     {
-      "page": "/aboutme",
-      "regex": "^/aboutme(?:/)?$",
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/aboutme(?:/)?$"
+      "namedRegex": "^/about(?:/)?$"
     },
     {
       "page": "/hotels",
