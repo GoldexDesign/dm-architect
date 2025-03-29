@@ -100,7 +100,16 @@ footer {
   .gallery {
     grid-template-columns: 1fr;
   }
+
+  /* ✅ Fix za fallback bold na mobilnim browserima */
+  body {
+    font-family: "KesslerSuperDisplay", "Crimson Text", serif !important;
+    font-weight: 400 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
+
 body,
 html {
   width: 100%;
