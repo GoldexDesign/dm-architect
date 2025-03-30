@@ -66,11 +66,38 @@ export default function Home() {
       {showContent && (
         <div className={styles.container}>
           <Head>
-            <title>DM Arhitekt - Interior Design Studio</title>
+            <title>DM ARCHITECT - Interior Design Studio</title>
             <meta
               name="description"
-              content="Discover unique and original interior design projects by DM Arhitekt. High-end architectural solutions for hotels, residential, and retail spaces."
+              content="Discover unique and original interior design projects by DM ARCHITECT. High-end architectural solutions for hotels, residential, and retail spaces."
             />
+
+            {/* Open Graph (for Viber, WhatsApp, Facebook, etc.) */}
+            <meta
+              property="og:title"
+              content="DM ARCHITECT - Interior Design Studio"
+            />
+            <meta
+              property="og:description"
+              content="Unique and original interior design projects for hotels, homes, and retail spaces. Based in Belgrade."
+            />
+            <meta property="og:image" content="/social-preview.jpg" />
+            <meta property="og:url" content="https://dmarchistudio.com/" />
+            <meta property="og:type" content="website" />
+
+            {/* Twitter Card (optional) */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta
+              name="twitter:title"
+              content="DM ARCHITECT - Interior Design Studio"
+            />
+            <meta
+              name="twitter:description"
+              content="Explore creative interior design by DM ARCHITECT. Projects across hospitality, retail, and residential."
+            />
+            <meta name="twitter:image" content="/social-preview.jpg" />
+
+            {/* JSON-LD Schema */}
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{
