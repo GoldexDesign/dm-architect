@@ -78,11 +78,6 @@ footer {
   font-weight: normal;
 }
 
-/* ✅ UJEDNAČENA BOJA TEKSTA KROZ SVE */
-body {
-  color: rgba(0, 0, 0, 0.72); /* svetlija crna za usklađen ton sa Kessler */
-}
-
 /* GALERIJA SLIKA */
 .gallery {
   display: grid;
@@ -114,13 +109,11 @@ body {
     grid-template-columns: 1fr;
   }
 
-  /* ✅ Fix za bold fallback na mobilnim browserima */
   body {
     font-family: "KesslerSuperDisplay", "CrimsonTextLocal", serif !important;
     font-weight: 400 !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: rgba(0, 0, 0, 0.72); /* osiguranje da i mobilni koristi istu boju */
   }
 }
 
@@ -131,4 +124,11 @@ html {
   overflow-x: hidden;
   transform: none !important;
   scale: 1 !important;
+}
+
+/* FALLBACK STIL ZA SRPSKA SLOVA */
+.fallback-char {
+  color: #777;
+  font-weight: 300;
+  opacity: 0.8;
 }

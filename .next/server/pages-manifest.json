@@ -1,14 +1,14 @@
 {
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/about": "pages/about.html",
   "/categories/[category]": "pages/categories/[category].html",
-  "/hotels": "pages/hotels.html",
   "/": "pages/index.html",
-  "/projects": "pages/projects.html",
   "/projects/[id]": "pages/projects/[id].html",
-  "/residential": "pages/residential.html",
   "/retail": "pages/retail.html",
+  "/_error": "pages/_error.js",
+  "/residential": "pages/residential.html",
+  "/projects": "pages/projects.html",
+  "/_app": "pages/_app.js",
+  "/hotels": "pages/hotels.html",
+  "/about": "pages/about.html",
   "/404": "pages/404.html"
 }

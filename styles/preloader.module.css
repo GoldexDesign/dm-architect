@@ -1,0 +1,22 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: auto;
+  margin-left: 25px; /* ⬅️ Ovo pomera logo udesno */
+}
