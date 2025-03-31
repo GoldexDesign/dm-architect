@@ -1,41 +1,91 @@
-/* Projects Page Styles */
+/* Home Page Styles */
 .container {
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 10px;
   font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px 0;
+  background: #f8f8f8;
+  border-bottom: 2px solid #ddd;
 }
 
 .title {
-  text-align: center;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.text {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #555;
-  text-align: center;
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  text-align: left;
 }
 
-.projectList {
-  list-style: none;
+.projectCard {
+  background: transparent;
   padding: 0;
-  text-align: center;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
 }
 
-.projectList li {
-  margin: 10px 0;
-  font-size: 1.4rem;
+.projectImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  cursor: pointer;
+  display: block;
 }
 
-.projectList a {
-  text-decoration: none;
-  color: #0070f3;
+.projectName {
+  font-size: 1rem;
+  margin-top: 5px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.projectList a:hover {
-  text-decoration: underline;
+.description {
+  margin-top: 40px;
+  text-align: justify;
+  padding: 20px 10px;
+  max-width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectName {
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .description {
+    padding: 10px;
+  }
 }

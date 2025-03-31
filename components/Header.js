@@ -46,17 +46,17 @@ export default function Header() {
             </Link>
             <ul className={styles.dropdownMenu}>
               <li>
-                <Link href="/residential" onClick={closeMenu}>
+                <Link href="/projects/residential" onClick={closeMenu}>
                   Residential
                 </Link>
               </li>
               <li>
-                <Link href="/hotels" onClick={closeMenu}>
+                <Link href="/projects/hotels" onClick={closeMenu}>
                   Hotels
                 </Link>
               </li>
               <li>
-                <Link href="/retail" onClick={closeMenu}>
+                <Link href="/projects/retail" onClick={closeMenu}>
                   Retail
                 </Link>
               </li>

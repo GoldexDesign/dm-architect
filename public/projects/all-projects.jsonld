@@ -6,6 +6,7 @@
       "@type": "Project",
       "id": "hotel-sky",
       "name": "Hotel Sky",
+      "category": "hotels",
       "image": [
         "/images/hotel-sky/hotel-sky-front-view.jpg"
       ]
@@ -14,6 +15,7 @@
       "@type": "Project",
       "id": "la-botilleria",
       "name": "La Botilleria",
+      "category": "retail",
       "image": [
         "/images/la-botilleria/la-botilleria-01.jpg"
       ]
@@ -22,6 +24,7 @@
       "@type": "Project",
       "id": "japanese-apartment",
       "name": "Japanese-Style Apartment",
+      "category": "residential",
       "image": [
         "/images/japanese-apartment/japanese-apartment-01.jpg"
       ]
@@ -30,6 +33,7 @@
       "@type": "Project",
       "id": "fimas-showroom",
       "name": "Fimas Showroom",
+      "category": "retail",
       "image": [
         "/images/fimas-showroom/fimas-showroom-01.jpg"
       ]
@@ -38,6 +42,7 @@
       "@type": "Project",
       "id": "scavolini-store",
       "name": "Scavolini Store",
+      "category": "retail",
       "image": [
         "/images/scavolini-store/scavolini-store-01.jpg"
       ]

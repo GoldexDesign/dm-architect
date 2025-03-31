@@ -1,0 +1,76 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.projectImage {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: 450px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.projectImage:hover {
+  transform: scale(1.02);
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #222;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectImage {
+    max-height: 300px;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+}

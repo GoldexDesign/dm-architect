@@ -5,15 +5,34 @@ import styles from "../styles/index.module.css";
 import preloaderStyles from "../styles/preloader.module.css";
 
 export default function Home() {
-  const [projects, setProjects] = useState([]);
   const [showContent, setShowContent] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const featuredProjects = [
+    {
+      id: "japanese-apartment",
+      category: "residential",
+      name: "Japanese Apartment",
+      image: "/images/japanese-apartment/japanese-apartment-42.jpg",
+    },
+    {
+      id: "fimas-showroom",
+      category: "retail",
+      name: "Fimas Showroom",
+      image: "/images/fimas-showroom/fimas-showroom-10.jpg",
+    },
+    {
+      id: "la-botilleria",
+      category: "retail",
+      name: "La Botilleria",
+      image: "/images/la-botilleria/la-botilleria-08.jpg",
+    },
+  ];
 
   useEffect(() => {
-    // Preloader timeout
     const timer1 = setTimeout(() => setFadeOut(true), 2000);
     const timer2 = setTimeout(() => setShowContent(true), 2500);
-
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
@@ -21,31 +40,13 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (showContent) {
-      fetch("/projects/all-projects.jsonld")
-        .then((res) => {
-          if (!res.ok) {
-            throw new Error(`HTTP error! Status: ${res.status}`);
-          }
-          return res.json();
-        })
-        .then((data) => {
-          if (!data || !Array.isArray(data.projects)) {
-            throw new Error("Invalid JSON structure or empty projects list");
-          }
-          const formattedProjects = data.projects.map((project) => ({
-            id: project.id,
-            name: project.name,
-            image:
-              Array.isArray(project.image) && project.image.length > 0
-                ? project.image[0]
-                : "https://via.placeholder.com/300x200?text=No+Image",
-          }));
-          setProjects(formattedProjects);
-        })
-        .catch((err) => console.error("Error loading projects data:", err));
-    }
-  }, [showContent]);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === featuredProjects.length - 1 ? 0 : prev + 1
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -71,16 +72,6 @@ export default function Home() {
               name="description"
               content="Discover unique and original interior design projects by DM ARCHITECT. High-end architectural solutions for hotels, residential, and retail spaces."
             />
-
-            {/* Open Graph for social sharing (WhatsApp, Viber, Facebook) */}
-            <meta
-              property="og:title"
-              content="DM ARCHITECT - Interior Design Studio"
-            />
-            <meta
-              property="og:description"
-              content="Unique and original interior design projects for hotels, homes, and retail spaces. Based in Belgrade."
-            />
             <meta
               property="og:image"
               content="https://dm-architect.vercel.app/images/social-preview.jpg"
@@ -89,60 +80,53 @@ export default function Home() {
               property="og:url"
               content="https://dm-architect.vercel.app/"
             />
-            <meta property="og:type" content="website" />
-
-            {/* Twitter card support */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta
-              name="twitter:title"
-              content="DM ARCHITECT - Interior Design Studio"
-            />
-            <meta
-              name="twitter:description"
-              content="Explore creative interior design by DM ARCHITECT. Projects across hospitality, retail, and residential."
-            />
-            <meta
-              name="twitter:image"
-              content="https://dm-architect.vercel.app/images/social-preview.jpg"
-            />
-
-            {/* JSON-LD schema for SEO and AI search */}
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "ItemList",
-                  projects: projects,
-                }),
-              }}
-            />
           </Head>
 
           <main className={styles.main}>
-            <div className={styles.projectsGrid}>
-              {projects.length > 0 ? (
-                projects.map((project) => (
-                  <div key={project.id} className={styles.projectCard}>
-                    <Link href={`/projects/${project.id}`}>
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className={styles.projectImage}
-                      />
-                    </Link>
-                    <h2 className={styles.projectName}>{project.name}</h2>
-                  </div>
-                ))
-              ) : (
-                <p>Loading projects...</p>
-              )}
+            <div className={styles.carousel}>
+              <div className={styles.imageWrapper}>
+                <Link
+                  href={`/projects/${featuredProjects[currentIndex].category}/${featuredProjects[currentIndex].id}`}
+                >
+                  <img
+                    src={featuredProjects[currentIndex].image}
+                    alt={featuredProjects[currentIndex].name}
+                    className={styles.carouselImage}
+                  />
+                </Link>
+
+                <button
+                  className={styles.arrowLeft}
+                  onClick={() =>
+                    setCurrentIndex((prev) =>
+                      prev === 0 ? featuredProjects.length - 1 : prev - 1
+                    )
+                  }
+                >
+                  &#10094;
+                </button>
+
+                <button
+                  className={styles.arrowRight}
+                  onClick={() =>
+                    setCurrentIndex((prev) =>
+                      prev === featuredProjects.length - 1 ? 0 : prev + 1
+                    )
+                  }
+                >
+                  &#10095;
+                </button>
+              </div>
+
+              <h2 className={styles.projectTitle}>
+                {featuredProjects[currentIndex].name}
+              </h2>
             </div>
 
             <section className={styles.description}>
-              <h2>About DM Arhitekt</h2>
+              <h2>About DM ARCHITECT</h2>
               <p>
-                DM Arhitekt is an interior design studio specializing in
+                DM ARCHITECT is an interior design studio specializing in
                 high-end projects. Our approach combines aesthetics,
                 functionality, and originality to create inspiring spaces that
                 stand out. Based in Belgrade, Serbia, our work includes

@@ -23,12 +23,21 @@
       "namedRegex": "^/categories/(?<nxtPcategory>[^/]+?)(?:/)?$"
     },
     {
-      "page": "/projects/[id]",
+      "page": "/projects/[category]",
       "regex": "^/projects/([^/]+?)(?:/)?$",
       "routeKeys": {
-        "nxtPid": "nxtPid"
+        "nxtPcategory": "nxtPcategory"
       },
-      "namedRegex": "^/projects/(?<nxtPid>[^/]+?)(?:/)?$"
+      "namedRegex": "^/projects/(?<nxtPcategory>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/projects/[category]/[project]",
+      "regex": "^/projects/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcategory": "nxtPcategory",
+        "nxtPproject": "nxtPproject"
+      },
+      "namedRegex": "^/projects/(?<nxtPcategory>[^/]+?)/(?<nxtPproject>[^/]+?)(?:/)?$"
     }
   ],
   "staticRoutes": [
