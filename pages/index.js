@@ -72,7 +72,7 @@ export default function Home() {
               content="Discover unique and original interior design projects by DM ARCHITECT. High-end architectural solutions for hotels, residential, and retail spaces."
             />
 
-            {/* Open Graph (for Viber, WhatsApp, Facebook, etc.) */}
+            {/* Open Graph for social sharing (WhatsApp, Viber, Facebook) */}
             <meta
               property="og:title"
               content="DM ARCHITECT - Interior Design Studio"
@@ -81,11 +81,17 @@ export default function Home() {
               property="og:description"
               content="Unique and original interior design projects for hotels, homes, and retail spaces. Based in Belgrade."
             />
-            <meta property="og:image" content="/social-preview.jpg" />
-            <meta property="og:url" content="https://dmarchistudio.com/" />
+            <meta
+              property="og:image"
+              content="https://dm-architect.vercel.app/images/social-preview.jpg"
+            />
+            <meta
+              property="og:url"
+              content="https://dm-architect.vercel.app/"
+            />
             <meta property="og:type" content="website" />
 
-            {/* Twitter Card (optional) */}
+            {/* Twitter card support */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta
               name="twitter:title"
@@ -95,9 +101,12 @@ export default function Home() {
               name="twitter:description"
               content="Explore creative interior design by DM ARCHITECT. Projects across hospitality, retail, and residential."
             />
-            <meta name="twitter:image" content="/social-preview.jpg" />
+            <meta
+              name="twitter:image"
+              content="https://dm-architect.vercel.app/images/social-preview.jpg"
+            />
 
-            {/* JSON-LD Schema */}
+            {/* JSON-LD schema for SEO and AI search */}
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{
