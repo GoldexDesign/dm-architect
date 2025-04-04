@@ -1,15 +1,11 @@
 {
-  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/hotels": "pages/hotels.html",
-  "/categories/[category]": "pages/categories/[category].html",
   "/": "pages/index.html",
   "/projects": "pages/projects.html",
+  "/_document": "pages/_document.js",
   "/projects/[category]/[project]": "pages/projects/[category]/[project].html",
   "/projects/[category]": "pages/projects/[category].html",
-  "/residential": "pages/residential.html",
-  "/retail": "pages/retail.html",
   "/about": "pages/about.html",
+  "/_app": "pages/_app.js",
   "/404": "pages/404.html"
 }

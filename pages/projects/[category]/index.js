@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-import styles from "../../../styles/projects.module.css";
+import styles from "../../../styles/category.module.css";
 
 export default function CategoryPage() {
   const router = useRouter();
@@ -31,9 +31,9 @@ export default function CategoryPage() {
   }, [category]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <Head>
-        <title>{category?.toUpperCase()} | DM ARCHITECT</title>
+        <title>{`${category?.toUpperCase()} | DM ARCHITECT`}</title>
         <meta
           name="description"
           content={`All ${category} projects by DM ARCHITECT interior design studio.`}

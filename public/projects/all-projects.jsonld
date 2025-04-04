@@ -13,11 +13,11 @@
     },
     {
       "@type": "Project",
-      "id": "la-botilleria",
-      "name": "La Botilleria",
+      "id": "enoteka-la-botilleria",
+      "name": "Enoteka La Botilleria",
       "category": "retail",
       "image": [
-        "/images/la-botilleria/la-botilleria-01.jpg"
+        "/images/enoteka-la-botilleria/enoteka-la-botilleria-01.jpg"
       ]
     },
     {

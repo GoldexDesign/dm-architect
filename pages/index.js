@@ -23,10 +23,10 @@ export default function Home() {
       image: "/images/fimas-showroom/fimas-showroom-10.jpg",
     },
     {
-      id: "la-botilleria",
+      id: "enoteka-la-botilleria",
       category: "retail",
-      name: "La Botilleria",
-      image: "/images/la-botilleria/la-botilleria-08.jpg",
+      name: "Enoteka La Botilleria",
+      image: "/images/enoteka-la-botilleria/enoteka-la-botilleria-08.jpg",
     },
   ];
 

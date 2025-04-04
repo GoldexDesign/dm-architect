@@ -15,14 +15,6 @@
   "headers": [],
   "dynamicRoutes": [
     {
-      "page": "/categories/[category]",
-      "regex": "^/categories/([^/]+?)(?:/)?$",
-      "routeKeys": {
-        "nxtPcategory": "nxtPcategory"
-      },
-      "namedRegex": "^/categories/(?<nxtPcategory>[^/]+?)(?:/)?$"
-    },
-    {
       "page": "/projects/[category]",
       "regex": "^/projects/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -54,28 +46,10 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
-      "page": "/hotels",
-      "regex": "^/hotels(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/hotels(?:/)?$"
-    },
-    {
       "page": "/projects",
       "regex": "^/projects(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/projects(?:/)?$"
-    },
-    {
-      "page": "/residential",
-      "regex": "^/residential(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/residential(?:/)?$"
-    },
-    {
-      "page": "/retail",
-      "regex": "^/retail(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/retail(?:/)?$"
     }
   ],
   "dataRoutes": [],

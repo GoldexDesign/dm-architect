@@ -1,0 +1,72 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Project",
+  "id": "enoteka-la-botilleria",
+  "name": "Enoteka La Botilleria",
+  "projectType": "Retail",
+  "description": "Enoteka La Botilleria is a compact and luxurious liquor shop in Belgrade, designed by DM Arhitekt. The design concept uses a dramatic arched shelving system with elegant wood and black finishes, highlighting high-end liquor brands. The central counter and custom lighting emphasize the boutique character of the space.",
+  "location": {
+    "@type": "Place",
+    "address": "Belgrade, Serbia"
+  },
+  "size": {
+    "totalArea": "23 m²"
+  },
+  "year": {
+    "design": "2022",
+    "construction": "2023"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "DM Arhitekt",
+    "affiliation": "DM Arhitekt Studio"
+  },
+  "photographer": "DM Arhitekt",
+  "featuredImage": "/images/enoteka-la-botilleria/enoteka-la-botilleria-08.jpg",
+  "features": [
+    "Liquor shelves with integrated lighting",
+    "Custom-designed central counter",
+    "Curved wooden architectural elements",
+    "Hidden storage solutions",
+    "Polished concrete flooring",
+    "Black and wood color palette"
+  ],
+  "participants": [
+    {
+      "name": "DM Arhitekt",
+      "role": "Interior Design"
+    },
+    {
+      "name": "Local Contractors",
+      "role": "Execution"
+    }
+  ],
+  "image": [
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-01.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-02.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-03.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-04.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-05.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-06.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-07.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-08.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-09.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-10.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-11.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-12.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-13.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-14.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-15.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-16.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-17.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-18.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-19.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-20.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-21.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-22.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-23.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-24.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-25.jpg",
+    "/images/enoteka-la-botilleria/enoteka-la-botilleria-26.jpg"
+  ]
+}

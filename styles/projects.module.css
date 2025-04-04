@@ -22,7 +22,7 @@
 
 .projectsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* 4 slike u jednom redu na desktopu */
   gap: 20px;
   justify-content: center;
   align-items: stretch;
@@ -64,7 +64,7 @@
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
   .projectsGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 u redu na tabletima */
   }
 
   .title {
@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 600px) {
   .projectsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 po redu na mobilnim */
   }
 
   .projectName {
