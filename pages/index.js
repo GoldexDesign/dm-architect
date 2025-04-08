@@ -4,7 +4,14 @@ import Link from "next/link";
 import styles from "../styles/index.module.css";
 import preloaderStyles from "../styles/preloader.module.css";
 
+import { useLanguage } from "../context/LanguageContext";
+import en from "../locales/en.json";
+import sr from "../locales/sr.json";
+
 export default function Home() {
+  const { language } = useLanguage();
+  const t = language === "sr" ? sr : en;
+
   const [showContent, setShowContent] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -68,10 +75,7 @@ export default function Home() {
         <div className={styles.container}>
           <Head>
             <title>DM ARCHITECT - Interior Design Studio</title>
-            <meta
-              name="description"
-              content="Discover unique and original interior design projects by DM ARCHITECT. High-end architectural solutions for hotels, residential, and retail spaces."
-            />
+            <meta name="description" content={t.home.description} />
             <meta
               property="og:image"
               content="https://dm-architect.vercel.app/images/social-preview.jpg"
@@ -124,14 +128,8 @@ export default function Home() {
             </div>
 
             <section className={styles.description}>
-              <h2>About DM ARCHITECT</h2>
-              <p>
-                DM ARCHITECT is an interior design studio specializing in
-                high-end projects. Our approach combines aesthetics,
-                functionality, and originality to create inspiring spaces that
-                stand out. Based in Belgrade, Serbia, our work includes
-                hospitality, residential, and retail interiors.
-              </p>
+              <h2>{t.about.title}</h2>
+              <p>{t.home.description}</p>
             </section>
           </main>
         </div>

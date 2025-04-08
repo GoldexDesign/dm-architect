@@ -1,0 +1,19 @@
+{
+  "menu": {
+    "projects": "Projekti",
+    "residential": "Stambeni",
+    "retail": "Maloprodaja",
+    "hotels": "Hoteli",
+    "about": "Studio",
+    "info": "O nama",
+    "press": "Publikacije"
+  },
+  "home": {
+    "description": "DM ARCHITECT je studio enterijera sa sedištem u Beogradu, specijalizovan za projekte u oblasti stanovanja, maloprodaje i ugostiteljstva visokog kvaliteta."
+  },
+  "about": {
+    "title": "O Studiju",
+    "info": "DM ARCHITECT je beogradski studio posvećen originalnom, hrabrom i inspirativnom dizajnu enterijera. Naš rad spaja funkciju i emociju.",
+    "press": "Ovde će se pojaviti odabrane publikacije u kojima je predstavljen rad studija DM ARCHITECT."
+  }
+}

@@ -1,6 +1,7 @@
 import "../styles/global.css";
 import Layout from "../components/Layout";
 import { useEffect } from "react";
+import { LanguageProvider } from "../context/LanguageContext";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -11,9 +12,11 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <LanguageProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </LanguageProvider>
   );
 }
 

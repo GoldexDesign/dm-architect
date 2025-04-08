@@ -1,26 +1,17 @@
-import Head from "next/head";
+import React from "react";
 import styles from "../../styles/about.module.css";
+import { useLanguage } from "../../context/LanguageContext";
+import en from "../../locales/en.json";
+import sr from "../../locales/sr.json";
 
 export default function InfoPage() {
+  const { language } = useLanguage();
+  const t = language === "sr" ? sr : en;
+
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Info | DM ARCHITECT</title>
-        <meta
-          name="description"
-          content="Learn more about DM ARCHITECT studio, its design philosophy, approach, and team."
-        />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>Info</h1>
-        <p className={styles.text}>
-          {/* Replace this text with real content */}
-          DM ARCHITECT is a Belgrade-based interior design studio dedicated to
-          creating original and inspiring spaces across hospitality,
-          residential, and retail projects.
-        </p>
-      </main>
+      <h1>{t.about.title}</h1>
+      <p>{t.about.info}</p>
     </div>
   );
 }

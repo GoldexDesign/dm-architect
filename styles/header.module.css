@@ -117,6 +117,12 @@
   margin-left: auto;
   padding: 5px 15px;
 }
+.language {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  z-index: 1000;
+}
 
 @media (max-width: 768px) {
   .menuToggle {

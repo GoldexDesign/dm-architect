@@ -1,0 +1,19 @@
+{
+  "menu": {
+    "projects": "Projects",
+    "residential": "Residential",
+    "retail": "Retail",
+    "hotels": "Hotels",
+    "about": "About",
+    "info": "Info",
+    "press": "Press"
+  },
+  "home": {
+    "description": "DM ARCHITECT is an interior design studio specializing in high-end residential, retail, and hospitality projects based in Belgrade, Serbia."
+  },
+  "about": {
+    "title": "About the Studio",
+    "info": "DM ARCHITECT is a Belgrade-based studio focused on original, bold and inspiring interior design. Our work merges function and emotion.",
+    "press": "Selected publications featuring DM ARCHITECT will appear here."
+  }
+}

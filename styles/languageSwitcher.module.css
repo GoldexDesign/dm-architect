@@ -1,0 +1,23 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.active {
+  color: black;
+  text-decoration: underline;
+}

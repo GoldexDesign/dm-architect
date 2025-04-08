@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/header.module.css";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "../context/LanguageContext";
+import en from "../locales/en.json";
+import sr from "../locales/sr.json";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { language } = useLanguage();
+  const t = language === "sr" ? sr : en;
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -16,6 +22,11 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      {/* Language Switcher on the left */}
+      <div className={styles.language}>
+        <LanguageSwitcher />
+      </div>
+
       {/* Logo in the center */}
       <div className={styles.logo}>
         <Link href="/" onClick={closeMenu}>
@@ -42,22 +53,22 @@ export default function Header() {
               className={styles.menuButton}
               onClick={closeMenu}
             >
-              Projects
+              {t.menu.projects}
             </Link>
             <ul className={styles.dropdownMenu}>
               <li>
                 <Link href="/projects/residential" onClick={closeMenu}>
-                  Residential
+                  {t.menu.residential}
                 </Link>
               </li>
               <li>
                 <Link href="/projects/hotels" onClick={closeMenu}>
-                  Hotels
+                  {t.menu.hotels}
                 </Link>
               </li>
               <li>
                 <Link href="/projects/retail" onClick={closeMenu}>
-                  Retail
+                  {t.menu.retail}
                 </Link>
               </li>
             </ul>
@@ -69,17 +80,17 @@ export default function Header() {
               className={styles.menuButton}
               onClick={closeMenu}
             >
-              About
+              {t.menu.about}
             </Link>
             <ul className={styles.dropdownMenu}>
               <li>
                 <Link href="/about/info" onClick={closeMenu}>
-                  Info
+                  {t.menu.info}
                 </Link>
               </li>
               <li>
                 <Link href="/about/press" onClick={closeMenu}>
-                  Press
+                  {t.menu.press}
                 </Link>
               </li>
             </ul>
