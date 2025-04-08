@@ -2,12 +2,24 @@
   "@context": "https://schema.org",
   "@type": "Project",
   "id": "japanese-apartment",
-  "name": "Japanese-Style Apartment",
-  "projectType": "Residential",
-  "description": "A serene Japanese-style apartment designed by DM Arhitekt. This 58m² Belgrade apartment blends natural materials, minimalist wood elements, and traditional Japanese aesthetics. The project features a harmonious balance between architecture and furniture, complemented by soft lighting and a calm color palette.",
+  "name": {
+    "en": "Japanese-Style Apartment",
+    "sr": "Stan u japanskom stilu"
+  },
+  "projectType": {
+    "en": "Residential",
+    "sr": "Stambeni"
+  },
+  "description": {
+    "en": "A serene Japanese-style apartment designed by DM Arhitekt. This 58m² Belgrade apartment blends natural materials, minimalist wood elements, and traditional Japanese aesthetics. The project features a harmonious balance between architecture and furniture, complemented by soft lighting and a calm color palette.",
+    "sr": "Smiren stan u japanskom stilu koji je projektovao DM Arhitekt. Ovaj beogradski stan od 58 m² kombinuje prirodne materijale, minimalističke drvene elemente i tradicionalnu japansku estetiku. Projekat odlikuje sklad između arhitekture i nameštaja, uz nežnu rasvetu i mirnu paletu boja."
+  },
   "location": {
     "@type": "Place",
-    "address": "Belgrade, Serbia"
+    "address": {
+      "en": "Belgrade, Serbia",
+      "sr": "Beograd, Srbija"
+    }
   },
   "size": {
     "totalArea": "58 m²"
@@ -24,18 +36,42 @@
   "photographer": "Relja Ivanić",
   "featuredImage": "/images/japanese-apartment/japanese-apartment-42.jpg",
   "features": [
-    "Traditional Japanese woodwork elements",
-    "Sliding wall partitions",
-    "Custom-designed wooden furniture",
-    "Minimalist lighting solutions",
-    "Earth-tone color palette",
-    "Integrated dining and kitchen zones",
-    "Hand-painted cherry blossom mural"
+    {
+      "en": "Traditional Japanese woodwork elements",
+      "sr": "Elementi japanskog drvodeljstva"
+    },
+    {
+      "en": "Sliding wall partitions",
+      "sr": "Klizne pregrade"
+    },
+    {
+      "en": "Custom-designed wooden furniture",
+      "sr": "Nameštaj po meri od drveta"
+    },
+    {
+      "en": "Minimalist lighting solutions",
+      "sr": "Minimalistička rasveta"
+    },
+    {
+      "en": "Earth-tone color palette",
+      "sr": "Paleta boja zemljanih tonova"
+    },
+    {
+      "en": "Integrated dining and kitchen zones",
+      "sr": "Integrisana trpezarija i kuhinja"
+    },
+    {
+      "en": "Hand-painted cherry blossom mural",
+      "sr": "Mural sa ručno oslikanim cvetom trešnje"
+    }
   ],
   "participants": [
     {
       "name": "DM Arhitekt",
-      "role": "Interior Design"
+      "role": {
+        "en": "Interior Design",
+        "sr": "Enterijer"
+      }
     }
   ],
   "image": [

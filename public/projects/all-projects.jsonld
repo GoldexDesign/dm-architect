@@ -5,7 +5,10 @@
     {
       "@type": "Project",
       "id": "hotel-sky",
-      "name": "Hotel Sky",
+      "name": {
+        "en": "Hotel Sky",
+        "sr": "Hotel Skaj"
+      },
       "category": "hotels",
       "image": [
         "/images/hotel-sky/hotel-sky-front-view.jpg"
@@ -14,7 +17,10 @@
     {
       "@type": "Project",
       "id": "enoteka-la-botilleria",
-      "name": "Enoteka La Botilleria",
+      "name": {
+        "en": "Enoteka La Botilleria",
+        "sr": "Enoteka La Botilerija"
+      },
       "category": "retail",
       "image": [
         "/images/enoteka-la-botilleria/enoteka-la-botilleria-01.jpg"
@@ -23,7 +29,10 @@
     {
       "@type": "Project",
       "id": "japanese-apartment",
-      "name": "Japanese-Style Apartment",
+      "name": {
+        "en": "Japanese-Style Apartment",
+        "sr": "Stan u japanskom stilu"
+      },
       "category": "residential",
       "image": [
         "/images/japanese-apartment/japanese-apartment-01.jpg"
@@ -32,7 +41,10 @@
     {
       "@type": "Project",
       "id": "fimas-showroom",
-      "name": "Fimas Showroom",
+      "name": {
+        "en": "Fimas Showroom",
+        "sr": "Fimas Šourum"
+      },
       "category": "retail",
       "image": [
         "/images/fimas-showroom/fimas-showroom-01.jpg"
@@ -41,7 +53,10 @@
     {
       "@type": "Project",
       "id": "scavolini-store",
-      "name": "Scavolini Store",
+      "name": {
+        "en": "Scavolini Store",
+        "sr": "Skavolini prodavnica"
+      },
       "category": "retail",
       "image": [
         "/images/scavolini-store/scavolini-store-01.jpg"

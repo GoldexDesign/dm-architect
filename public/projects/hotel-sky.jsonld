@@ -2,11 +2,20 @@
   "@context": "https://schema.org",
   "@type": "Project",
   "id": "hotel-sky",
-  "name": "Hotel Sky",
-  "description": "Hotel Sky je moderan enterijer smešten u mirnoj zoni Beograda, ususkan između tradicionalnog gradskog tkiva. Projekat je osmišljen sa pažljivo dizajniranim plafonima, elegantnim nameštajem i prirodnim materijalima, što ga čini izuzetnim mestom za boravak.",
+  "name": {
+    "en": "Hotel Sky",
+    "sr": "Hotel Sky"
+  },
+  "description": {
+    "en": "Hotel Sky is a modern interior located in a quiet zone of Belgrade, nestled between traditional city structures. The project features carefully designed ceilings, elegant furniture, and natural materials, making it a distinctive place to stay.",
+    "sr": "Hotel Sky je moderan enterijer smešten u mirnoj zoni Beograda, ususkan između tradicionalnog gradskog tkiva. Projekat je osmišljen sa pažljivo dizajniranim plafonima, elegantnim nameštajem i prirodnim materijalima, što ga čini izuzetnim mestom za boravak."
+  },
   "location": {
     "@type": "Place",
-    "address": "Ul. Lomina br.28, Savski venac, Beograd"
+    "address": {
+      "en": "Ul. Lomina 28, Savski venac, Belgrade",
+      "sr": "Ul. Lomina br.28, Savski venac, Beograd"
+    }
   },
   "dateCreated": "2017-01-01",
   "author": {
@@ -23,16 +32,40 @@
     "design": "2017",
     "construction": "2017"
   },
-  "projectType": "hotels",
+  "projectType": {
+    "en": "Hotels",
+    "sr": "Hoteli"
+  },
   "featuredImage": "/images/hotel-sky/hotel-sky-front-view.jpg",
   "features": [
-    "Glavni hol sa recepcijom",
-    "Geometrijski oblici u dizajnu",
-    "Elegantni plafoni i nameštaj",
-    "Prirodni materijali: mermer, drvo i koža",
-    "Mini restoran sa doručkom",
-    "Sala za sastanke",
-    "Mini SPA centar"
+    {
+      "en": "Main hall with reception",
+      "sr": "Glavni hol sa recepcijom"
+    },
+    {
+      "en": "Geometric shapes in design",
+      "sr": "Geometrijski oblici u dizajnu"
+    },
+    {
+      "en": "Elegant ceilings and furniture",
+      "sr": "Elegantni plafoni i nameštaj"
+    },
+    {
+      "en": "Natural materials: marble, wood, leather",
+      "sr": "Prirodni materijali: mermer, drvo i koža"
+    },
+    {
+      "en": "Mini restaurant with breakfast",
+      "sr": "Mini restoran sa doručkom"
+    },
+    {
+      "en": "Meeting room",
+      "sr": "Sala za sastanke"
+    },
+    {
+      "en": "Mini SPA center",
+      "sr": "Mini SPA centar"
+    }
   ],
   "accommodation": {
     "totalRooms": 37,
@@ -43,23 +76,38 @@
   "participants": [
     {
       "name": "Casa",
-      "role": "Staklene pregrade i tuš kabine"
+      "role": {
+        "en": "Glass partitions and shower cabins",
+        "sr": "Staklene pregrade i tuš kabine"
+      }
     },
     {
       "name": "Ginko nameštaj",
-      "role": "Sofa u ulaznom holu, restoranske stolice i stolovi"
+      "role": {
+        "en": "Lobby sofas, restaurant chairs and tables",
+        "sr": "Sofa u ulaznom holu, restoranske stolice i stolovi"
+      }
     },
     {
       "name": "Grantex",
-      "role": "Draperi, zavese, fotelje u sobama i ulaznom holu, klub stolovi"
+      "role": {
+        "en": "Drapes, curtains, armchairs, and club tables",
+        "sr": "Draperi, zavese, fotelje u sobama i ulaznom holu, klub stolovi"
+      }
     },
     {
       "name": "Šumadija granit",
-      "role": "Mermerni podovi u holu, restoran, hodnici i stepenište"
+      "role": {
+        "en": "Marble floors in lobby, restaurant, corridors, stairs",
+        "sr": "Mermerni podovi u holu, restoran, hodnici i stepenište"
+      }
     },
     {
       "name": "SLV Struja",
-      "role": "Rasveta"
+      "role": {
+        "en": "Lighting",
+        "sr": "Rasveta"
+      }
     }
   ],
   "image": [

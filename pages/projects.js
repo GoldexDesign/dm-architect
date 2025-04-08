@@ -4,6 +4,10 @@ import Link from "next/link";
 import styles from "../styles/projects.module.css";
 import preloaderStyles from "../styles/preloader.module.css";
 
+import { useLanguage } from "../context/LanguageContext";
+import en from "../locales/en.json";
+import sr from "../locales/sr.json";
+
 const projectFiles = [
   "hotel-sky",
   "enoteka-la-botilleria",
@@ -16,6 +20,9 @@ export default function ProjectsPage() {
   const [projects, setProjects] = useState([]);
   const [showContent, setShowContent] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+
+  const { language } = useLanguage();
+  const t = language === "sr" ? sr : en;
 
   useEffect(() => {
     const timer1 = setTimeout(() => setFadeOut(true), 2000);
@@ -34,14 +41,20 @@ export default function ProjectsPage() {
             .then((res) => res.json())
             .then((data) => ({
               id: data.id,
-              name: data.name,
-              category: data.projectType.toLowerCase(), // hotels, retail, etc.
+              name:
+                typeof data.name === "object"
+                  ? data.name[language] || data.name.en
+                  : data.name,
+              category: data.projectType?.toLowerCase?.() || "unknown",
               image:
                 data.featuredImage ||
+                data.image?.[0] ||
                 "https://via.placeholder.com/300x200?text=No+Image",
-
               constructionYear: parseInt(data.year?.construction) || 0,
-              description: data.description || "",
+              description:
+                typeof data.description === "object"
+                  ? data.description[language] || data.description.en
+                  : data.description,
             }))
             .catch((err) => {
               console.error(`Failed to load ${id}.jsonld`, err);
@@ -56,7 +69,7 @@ export default function ProjectsPage() {
         setProjects(sorted);
       });
     }
-  }, [showContent]);
+  }, [showContent, language]);
 
   return (
     <>
@@ -77,21 +90,8 @@ export default function ProjectsPage() {
       {showContent && (
         <div className={styles.container}>
           <Head>
-            <title>All Projects | DM ARCHITECT</title>
-            <meta
-              name="description"
-              content="Browse all interior design projects by DM ARCHITECT studio. Discover our original designs for hotels, residential, and retail spaces."
-            />
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "ItemList",
-                  projects: projects,
-                }),
-              }}
-            />
+            <title>{t.projects.title} | DM ARCHITECT</title>
+            <meta name="description" content={t.projects.description} />
           </Head>
 
           <main className={styles.main}>
@@ -115,14 +115,8 @@ export default function ProjectsPage() {
             </div>
 
             <section className={styles.description}>
-              <h2>About DM ARCHITECT</h2>
-              <p>
-                DM ARCHITECT is an interior design studio specializing in
-                high-end projects. Our approach combines aesthetics,
-                functionality, and originality to create inspiring spaces that
-                stand out. Based in Belgrade, Serbia, our work includes
-                hospitality, residential, and retail interiors.
-              </p>
+              <h2>{t.projects.title}</h2>
+              <p>{t.projects.description}</p>
             </section>
           </main>
         </div>

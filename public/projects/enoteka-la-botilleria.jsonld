@@ -2,12 +2,24 @@
   "@context": "https://schema.org",
   "@type": "Project",
   "id": "enoteka-la-botilleria",
-  "name": "Enoteka La Botilleria",
-  "projectType": "Retail",
-  "description": "Enoteka La Botilleria is a compact and luxurious liquor shop in Belgrade, designed by DM Arhitekt. The design concept uses a dramatic arched shelving system with elegant wood and black finishes, highlighting high-end liquor brands. The central counter and custom lighting emphasize the boutique character of the space.",
+  "name": {
+    "en": "Enoteka La Botilleria",
+    "sr": "Enoteka La Botilerija"
+  },
+  "projectType": {
+    "en": "Retail",
+    "sr": "Maloprodaja"
+  },
+  "description": {
+    "en": "Enoteka La Botilleria is a compact and luxurious liquor shop in Belgrade, designed by DM Arhitekt. The design concept uses a dramatic arched shelving system with elegant wood and black finishes, highlighting high-end liquor brands. The central counter and custom lighting emphasize the boutique character of the space.",
+    "sr": "Enoteka La Botilerija je kompaktna i luksuzna prodavnica pića u Beogradu, koju je projektovao DM Arhitekt. Dizajn koristi dramatične lučne police, elegantne drvene i crne završne obrade, ističući premijum brendove. Centralni pult i rasveta naglašavaju butikski karakter prostora."
+  },
   "location": {
     "@type": "Place",
-    "address": "Belgrade, Serbia"
+    "address": {
+      "en": "Belgrade, Serbia",
+      "sr": "Beograd, Srbija"
+    }
   },
   "size": {
     "totalArea": "23 m²"
@@ -24,21 +36,45 @@
   "photographer": "DM Arhitekt",
   "featuredImage": "/images/enoteka-la-botilleria/enoteka-la-botilleria-08.jpg",
   "features": [
-    "Liquor shelves with integrated lighting",
-    "Custom-designed central counter",
-    "Curved wooden architectural elements",
-    "Hidden storage solutions",
-    "Polished concrete flooring",
-    "Black and wood color palette"
+    {
+      "en": "Liquor shelves with integrated lighting",
+      "sr": "Police za piće sa integrisanom rasvetom"
+    },
+    {
+      "en": "Custom-designed central counter",
+      "sr": "Centralni pult po meri"
+    },
+    {
+      "en": "Curved wooden architectural elements",
+      "sr": "Zakrivljeni drveni arhitektonski elementi"
+    },
+    {
+      "en": "Hidden storage solutions",
+      "sr": "Skrivena skladišna rešenja"
+    },
+    {
+      "en": "Polished concrete flooring",
+      "sr": "Pod od poliranog betona"
+    },
+    {
+      "en": "Black and wood color palette",
+      "sr": "Paleta boja crno i drvo"
+    }
   ],
   "participants": [
     {
       "name": "DM Arhitekt",
-      "role": "Interior Design"
+      "role": {
+        "en": "Interior Design",
+        "sr": "Enterijer dizajn"
+      }
     },
     {
       "name": "Local Contractors",
-      "role": "Execution"
+      "role": {
+        "en": "Execution",
+        "sr": "Izvođenje radova"
+      }
     }
   ],
   "image": [

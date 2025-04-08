@@ -2,12 +2,24 @@
   "@context": "https://schema.org",
   "@type": "Project",
   "id": "fimas-showroom",
-  "name": "Fimas Showroom",
-  "projectType": "retail",
-  "description": "A striking showroom designed by DM Arhitekt for Fimas, showcasing a seamless blend of architectural precision and interior design elegance. The space integrates wood, metal, and high-end lighting into a functional and inviting environment for hospitality and kitchenware display.",
+  "name": {
+    "en": "Fimas Showroom",
+    "sr": "Fimas Šou-rum"
+  },
+  "projectType": {
+    "en": "Retail",
+    "sr": "Maloprodaja"
+  },
+  "description": {
+    "en": "A striking showroom designed by DM Arhitekt for Fimas, showcasing a seamless blend of architectural precision and interior design elegance. The space integrates wood, metal, and high-end lighting into a functional and inviting environment for hospitality and kitchenware display.",
+    "sr": "Impresivan šou-rum koji je za Fimas dizajnirao DM Arhitekt, sa savršenim spojem arhitektonske preciznosti i elegancije enterijera. Prostor kombinuje drvo, metal i vrhunsku rasvetu u funkcionalnom ambijentu za prikaz kuhinja i ugostiteljske opreme."
+  },
   "location": {
     "@type": "Place",
-    "address": "Belgrade, Serbia"
+    "address": {
+      "en": "Belgrade, Serbia",
+      "sr": "Beograd, Srbija"
+    }
   },
   "size": {
     "totalArea": "310 m²"
@@ -24,16 +36,34 @@
   "photographer": "Relja Ivanić",
   "featuredImage": "/images/fimas-showroom/fimas-showroom-10.jpg",
   "features": [
-    "Architectural wood and metal detailing",
-    "Custom-made counters and shelving",
-    "Integrated ceiling and wall lighting",
-    "Red velvet and minimalist furniture",
-    "Large hospitality display sections"
+    {
+      "en": "Architectural wood and metal detailing",
+      "sr": "Arhitektonski detalji od drveta i metala"
+    },
+    {
+      "en": "Custom-made counters and shelving",
+      "sr": "Pultovi i police po meri"
+    },
+    {
+      "en": "Integrated ceiling and wall lighting",
+      "sr": "Integrisana plafonska i zidna rasveta"
+    },
+    {
+      "en": "Red velvet and minimalist furniture",
+      "sr": "Nameštaj od crvenog somota i minimalističkog dizajna"
+    },
+    {
+      "en": "Large hospitality display sections",
+      "sr": "Velike sekcije za prikaz ugostiteljske opreme"
+    }
   ],
   "participants": [
     {
       "name": "DM Arhitekt",
-      "role": "Interior Design"
+      "role": {
+        "en": "Interior Design",
+        "sr": "Enterijer dizajn"
+      }
     }
   ],
   "image": [

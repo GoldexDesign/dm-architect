@@ -2,16 +2,35 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-import styles from "../../../styles/category.module.css";
+import styles from "../../../styles/projects.module.css";
+import preloaderStyles from "../../../styles/preloader.module.css";
 
-export default function CategoryPage() {
+import { useLanguage } from "../../../context/LanguageContext";
+import en from "../../../locales/en.json";
+import sr from "../../../locales/sr.json";
+
+export default function CategoryProjectsPage() {
+  const [projects, setProjects] = useState([]);
+  const [showContent, setShowContent] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
+
   const router = useRouter();
   const { category } = router.query;
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+
+  const { language } = useLanguage();
+  const t = language === "sr" ? sr : en;
 
   useEffect(() => {
-    if (category) {
+    const timer1 = setTimeout(() => setFadeOut(true), 2000);
+    const timer2 = setTimeout(() => setShowContent(true), 2500);
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (showContent && category) {
       fetch("/projects/all-projects.jsonld")
         .then((res) => res.json())
         .then((data) => {
@@ -20,54 +39,86 @@ export default function CategoryPage() {
               proj.category &&
               proj.category.toLowerCase() === category.toLowerCase()
           );
-          setProjects(filtered);
-          setLoading(false);
+
+          const mapped = filtered.map((proj) => ({
+            ...proj,
+            name:
+              typeof proj.name === "object"
+                ? proj.name[language] || proj.name.en
+                : proj.name,
+            image:
+              Array.isArray(proj.image) && proj.image.length > 0
+                ? proj.image[0]
+                : "https://via.placeholder.com/300x200?text=No+Image",
+          }));
+
+          setProjects(mapped);
         })
         .catch((err) => {
-          console.error("Error loading projects:", err);
-          setLoading(false);
+          console.error("Error loading category projects:", err);
         });
     }
-  }, [category]);
+  }, [showContent, category, language]);
+
+  const categoryName =
+    category === "residential"
+      ? t.menu.residential
+      : category === "retail"
+      ? t.menu.retail
+      : category === "hotels"
+      ? t.menu.hotels
+      : category;
 
   return (
-    <div className={styles.wrapper}>
-      <Head>
-        <title>{`${category?.toUpperCase()} | DM ARCHITECT`}</title>
-        <meta
-          name="description"
-          content={`All ${category} projects by DM ARCHITECT interior design studio.`}
-        />
-      </Head>
+    <>
+      {!showContent && (
+        <div
+          className={`${preloaderStyles.preloader} ${
+            fadeOut ? preloaderStyles.fadeOut : ""
+          }`}
+        >
+          <img
+            src="/images/DM_logo.svg"
+            alt="DM Arhitekt Logo"
+            className={preloaderStyles.logo}
+          />
+        </div>
+      )}
 
-      <main className={styles.main}>
-        <h1 className={styles.heading}>
-          {category?.charAt(0).toUpperCase() + category?.slice(1)} Projects
-        </h1>
+      {showContent && (
+        <div className={styles.container}>
+          <Head>
+            <title>{categoryName} | DM ARCHITECT</title>
+            <meta
+              name="description"
+              content={`All ${categoryName} projects by DM ARCHITECT.`}
+            />
+          </Head>
 
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-          <div className={styles.grid}>
-            {projects.map((project) => (
-              <div key={project.id} className={styles.card}>
-                <Link href={`/projects/${project.category}/${project.id}`}>
-                  <img
-                    src={
-                      Array.isArray(project.image) && project.image.length > 0
-                        ? project.image[0]
-                        : "https://via.placeholder.com/300x200?text=No+Image"
-                    }
-                    alt={project.name}
-                    className={styles.image}
-                  />
-                </Link>
-                <h2 className={styles.title}>{project.name}</h2>
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
-    </div>
+          <main className={styles.main}>
+            <h1 className={styles.title}>{categoryName}</h1>
+
+            <div className={styles.projectsGrid}>
+              {projects.length > 0 ? (
+                projects.map((project) => (
+                  <div key={project.id} className={styles.projectCard}>
+                    <Link href={`/projects/${project.category}/${project.id}`}>
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className={styles.projectImage}
+                      />
+                    </Link>
+                    <h2 className={styles.projectName}>{project.name}</h2>
+                  </div>
+                ))
+              ) : (
+                <p>No projects found.</p>
+              )}
+            </div>
+          </main>
+        </div>
+      )}
+    </>
   );
 }

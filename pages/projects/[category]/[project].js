@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import styles from "../../../styles/project.module.css";
+import { useLanguage } from "../../../context/LanguageContext";
 
 export default function ProjectPage() {
   const router = useRouter();
@@ -9,6 +10,7 @@ export default function ProjectPage() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
+  const { language } = useLanguage();
 
   useEffect(() => {
     if (project) {
@@ -39,13 +41,16 @@ export default function ProjectPage() {
     );
   }
 
+  const getValue = (field) =>
+    typeof field === "object" ? field[language] || field.en : field;
+
   return (
     <div className={styles.wrapper}>
       <Head>
-        <title>{`${data.name} | DM ARCHITECT`}</title>
+        <title>{`${getValue(data.name)} | DM ARCHITECT`}</title>
         <meta
           name="description"
-          content={data.description || "Project by DM ARCHITECT"}
+          content={getValue(data.description) || "Project by DM ARCHITECT"}
         />
         <script
           type="application/ld+json"
@@ -54,7 +59,7 @@ export default function ProjectPage() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>{data.name}</h1>
+        <h1 className={styles.title}>{getValue(data.name)}</h1>
 
         <div className={styles.gallery}>
           {Array.isArray(data.image) &&
@@ -62,7 +67,7 @@ export default function ProjectPage() {
               <img
                 key={index}
                 src={img}
-                alt={`${data.name} image ${index + 1}`}
+                alt={`${getValue(data.name)} image ${index + 1}`}
                 className={styles.image}
               />
             ))}
@@ -70,66 +75,83 @@ export default function ProjectPage() {
 
         {data.description && (
           <section className={styles.description}>
-            <h2>Description</h2>
-            <p>{data.description}</p>
+            <h2>{language === "sr" ? "Opis" : "Description"}</h2>
+            <p>{getValue(data.description)}</p>
           </section>
         )}
 
         {data.location?.address && (
           <p>
-            <strong>Location:</strong> {data.location.address}
+            <strong>{language === "sr" ? "Lokacija" : "Location"}:</strong>{" "}
+            {getValue(data.location.address)}
           </p>
         )}
 
         {data.projectType && (
           <p>
-            <strong>Project Type:</strong> {data.projectType}
+            <strong>
+              {language === "sr" ? "Tip projekta" : "Project Type"}:
+            </strong>{" "}
+            {getValue(data.projectType)}
           </p>
         )}
 
         {data.size?.totalArea && (
           <p>
-            <strong>Total Area:</strong> {data.size.totalArea}
+            <strong>
+              {language === "sr" ? "Ukupna površina" : "Total Area"}:
+            </strong>{" "}
+            {data.size.totalArea}
           </p>
         )}
 
         {data.size?.receptionArea && (
           <p>
-            <strong>Reception Area:</strong> {data.size.receptionArea}
+            <strong>
+              {language === "sr" ? "Recepcija" : "Reception Area"}:
+            </strong>{" "}
+            {data.size.receptionArea}
           </p>
         )}
 
         {data.year?.design && (
           <p>
-            <strong>Design Year:</strong> {data.year.design}
+            <strong>
+              {language === "sr" ? "Godina dizajna" : "Design Year"}:
+            </strong>{" "}
+            {data.year.design}
           </p>
         )}
 
         {data.year?.construction && (
           <p>
-            <strong>Construction Year:</strong> {data.year.construction}
+            <strong>
+              {language === "sr" ? "Godina izgradnje" : "Construction Year"}:
+            </strong>{" "}
+            {data.year.construction}
           </p>
         )}
 
         {data.author?.name && (
           <p>
-            <strong>Author:</strong> {data.author.name} (
-            {data.author.affiliation})
+            <strong>{language === "sr" ? "Autor" : "Author"}:</strong>{" "}
+            {data.author.name} ({data.author.affiliation})
           </p>
         )}
 
         {data.photographer && (
           <p>
-            <strong>Photographer:</strong> {data.photographer}
+            <strong>{language === "sr" ? "Fotograf" : "Photographer"}:</strong>{" "}
+            {data.photographer}
           </p>
         )}
 
         {data.features && data.features.length > 0 && (
           <section>
-            <h2>Features</h2>
+            <h2>{language === "sr" ? "Karakteristike" : "Features"}</h2>
             <ul>
               {data.features.map((f, idx) => (
-                <li key={idx}>{f}</li>
+                <li key={idx}>{getValue(f)}</li>
               ))}
             </ul>
           </section>
@@ -137,11 +159,11 @@ export default function ProjectPage() {
 
         {data.participants && data.participants.length > 0 && (
           <section>
-            <h2>Participants</h2>
+            <h2>{language === "sr" ? "Učesnici" : "Participants"}</h2>
             <ul>
               {data.participants.map((p, idx) => (
                 <li key={idx}>
-                  <strong>{p.name}</strong>: {p.role}
+                  <strong>{p.name}</strong>: {getValue(p.role)}
                 </li>
               ))}
             </ul>

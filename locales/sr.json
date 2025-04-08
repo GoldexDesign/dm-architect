@@ -15,5 +15,9 @@
     "title": "O Studiju",
     "info": "DM ARCHITECT je beogradski studio posvećen originalnom, hrabrom i inspirativnom dizajnu enterijera. Naš rad spaja funkciju i emociju.",
     "press": "Ovde će se pojaviti odabrane publikacije u kojima je predstavljen rad studija DM ARCHITECT."
+  },
+  "projects": {
+    "title": "O Studiju DM ARCHITECT",
+    "description": "DM ARCHITECT je studio za dizajn enterijera fokusiran na vrhunske projekte..."
   }
 }

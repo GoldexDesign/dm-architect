@@ -15,5 +15,9 @@
     "title": "About the Studio",
     "info": "DM ARCHITECT is a Belgrade-based studio focused on original, bold and inspiring interior design. Our work merges function and emotion.",
     "press": "Selected publications featuring DM ARCHITECT will appear here."
+  },
+  "projects": {
+    "title": "About DM ARCHITECT",
+    "description": "DM ARCHITECT is an interior design studio specializing in high-end projects..."
   }
 }

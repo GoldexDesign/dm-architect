@@ -2,12 +2,24 @@
   "@context": "https://schema.org",
   "@type": "Project",
   "id": "scavolini-store",
-  "name": "Scavolini Store",
-  "projectType": "retail",
-  "description": "Retail showroom for Scavolini with high-end kitchen displays and industrial ceiling design. Designed by DM Arhitekt.",
+  "name": {
+    "en": "Scavolini Store",
+    "sr": "Scavolini Prodavnica"
+  },
+  "projectType": {
+    "en": "Retail",
+    "sr": "Maloprodaja"
+  },
+  "description": {
+    "en": "Retail showroom for Scavolini with high-end kitchen displays and industrial ceiling design. Designed by DM Arhitekt.",
+    "sr": "Maloprodajni salon za Scavolini sa luksuznim kuhinjskim postavkama i industrijskim plafonom. Dizajnirao DM Arhitekt."
+  },
   "location": {
     "@type": "Place",
-    "address": "Belgrade, Serbia"
+    "address": {
+      "en": "Belgrade, Serbia",
+      "sr": "Beograd, Srbija"
+    }
   },
   "size": {
     "totalArea": "340 m²"
@@ -24,16 +36,34 @@
   "photographer": "DM Arhitekt Studio",
   "featuredImage": "/images/scavolini-store/scavolini-store-01.jpg",
   "features": [
-    "Colorful furniture pieces",
-    "Gaggenau and Diesel kitchen displays",
-    "Custom-made counters",
-    "Reception area with shelving",
-    "Exposed ceiling pipes"
+    {
+      "en": "Colorful furniture pieces",
+      "sr": "Šarenolik nameštaj"
+    },
+    {
+      "en": "Gaggenau and Diesel kitchen displays",
+      "sr": "Kuhinjske postavke Gaggenau i Diesel"
+    },
+    {
+      "en": "Custom-made counters",
+      "sr": "Pultovi po meri"
+    },
+    {
+      "en": "Reception area with shelving",
+      "sr": "Recepcija sa policama"
+    },
+    {
+      "en": "Exposed ceiling pipes",
+      "sr": "Izložene cevi na plafonu"
+    }
   ],
   "participants": [
     {
       "name": "DM Arhitekt",
-      "role": "Interior Design"
+      "role": {
+        "en": "Interior Design",
+        "sr": "Enterijer"
+      }
     }
   ],
   "image": [
