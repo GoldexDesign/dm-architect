@@ -1,8 +1,13 @@
 {
-  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/_app": "pages/_app.js",
+  "/about": "pages/about.html",
+  "/about/info": "pages/about/info.html",
   "/_document": "pages/_document.js",
-  "/projects/[category]": "pages/projects/[category].js",
-  "/projects": "pages/projects.js",
-  "/projects/[category]/[project]": "pages/projects/[category]/[project].js"
+  "/about/press": "pages/about/press.html",
+  "/": "pages/index.html",
+  "/projects": "pages/projects.html",
+  "/projects/[category]/[project]": "pages/projects/[category]/[project].html",
+  "/projects/[category]": "pages/projects/[category].html",
+  "/404": "pages/404.html"
 }
