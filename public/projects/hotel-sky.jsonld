@@ -21,9 +21,10 @@
   },
   "year": {
     "design": "2017",
-    "construction": "2017/2018"
+    "construction": "2017"
   },
-  "projectType": "Hotel, Enterijer, Ugostiteljski objekat",
+  "projectType": "hotels",
+  "featuredImage": "/images/hotel-sky/hotel-sky-front-view.jpg",
   "features": [
     "Glavni hol sa recepcijom",
     "Geometrijski oblici u dizajnu",

@@ -37,9 +37,9 @@ export default function ProjectsPage() {
               name: data.name,
               category: data.projectType.toLowerCase(), // hotels, retail, etc.
               image:
-                Array.isArray(data.image) && data.image.length > 0
-                  ? data.image[0]
-                  : "https://via.placeholder.com/300x200?text=No+Image",
+                data.featuredImage ||
+                "https://via.placeholder.com/300x200?text=No+Image",
+
               constructionYear: parseInt(data.year?.construction) || 0,
               description: data.description || "",
             }))
