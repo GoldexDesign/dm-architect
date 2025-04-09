@@ -1,0 +1,135 @@
+.modal-overlay {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px);
+  background: rgba(255, 255, 255, 0.98);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 999;
+  padding: 40px 20px 20px;
+  overflow-y: auto;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #333;
+  font-style: italic;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: url("/images/Arrows/close.svg") no-repeat;
+  background-size: 20px 20px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  text-indent: -9999px;
+  border: none;
+  z-index: 1000;
+}
+
+.leftZone,
+.rightZone {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 10;
+}
+
+.leftZone {
+  left: 0;
+  cursor: url("/images/Arrows/prev.svg") 0 24, auto;
+}
+
+.rightZone {
+  right: 0;
+  cursor: url("/images/Arrows/next.svg") 100 24, auto;
+}
+
+.logo {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 90px;
+
+  pointer-events: none;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  .modal {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .modal-image {
+    max-height: 60vh;
+  }
+
+  .caption {
+    font-size: 0.85rem;
+  }
+
+  .close-button {
+    width: 20px;
+    height: 20px;
+    background-size: 18px 18px;
+  }
+
+  .logo {
+    width: 70px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-image {
+    max-height: 50vh;
+  }
+
+  .caption {
+    font-size: 0.75rem;
+  }
+
+  .close-button {
+    width: 18px;
+    height: 18px;
+    background-size: 16px 16px;
+  }
+
+  .logo {
+    width: 60px;
+    bottom: 8px;
+    right: 8px;
+  }
+}

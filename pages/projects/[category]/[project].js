@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import styles from "../../../styles/project.module.css";
 import { useLanguage } from "../../../context/LanguageContext";
+import ImageModal from "../../../components/ImageModal"; // dodato
 
 export default function ProjectPage() {
   const router = useRouter();
@@ -11,6 +12,9 @@ export default function ProjectPage() {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const { language } = useLanguage();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalIndex, setModalIndex] = useState(0);
 
   useEffect(() => {
     if (project) {
@@ -30,6 +34,15 @@ export default function ProjectPage() {
         });
     }
   }, [project]);
+
+  const openModal = (index) => {
+    setModalIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   if (loading) {
     return <p style={{ padding: "40px", textAlign: "center" }}>Loading...</p>;
@@ -69,9 +82,18 @@ export default function ProjectPage() {
                 src={img}
                 alt={`${getValue(data.name)} image ${index + 1}`}
                 className={styles.image}
+                onClick={() => openModal(index)} // klik za otvaranje modala
               />
             ))}
         </div>
+
+        {modalOpen && (
+          <ImageModal
+            images={data.image}
+            onClose={closeModal}
+            startIndex={modalIndex}
+          />
+        )}
 
         {data.description && (
           <section className={styles.description}>
