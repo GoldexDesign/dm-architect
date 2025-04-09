@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import styles from "../../../styles/project.module.css";
 import { useLanguage } from "../../../context/LanguageContext";
-import ImageModal from "../../../components/ImageModal"; // dodato
+import ImageModal from "../../../components/ImageModal";
 
 export default function ProjectPage() {
   const router = useRouter();
@@ -44,6 +44,9 @@ export default function ProjectPage() {
     setModalOpen(false);
   };
 
+  const getValue = (field) =>
+    typeof field === "object" ? field[language] || field.en : field;
+
   if (loading) {
     return <p style={{ padding: "40px", textAlign: "center" }}>Loading...</p>;
   }
@@ -53,9 +56,6 @@ export default function ProjectPage() {
       <p style={{ padding: "40px", textAlign: "center" }}>Project not found.</p>
     );
   }
-
-  const getValue = (field) =>
-    typeof field === "object" ? field[language] || field.en : field;
 
   return (
     <div className={styles.wrapper}>
@@ -82,7 +82,7 @@ export default function ProjectPage() {
                 src={img}
                 alt={`${getValue(data.name)} image ${index + 1}`}
                 className={styles.image}
-                onClick={() => openModal(index)} // klik za otvaranje modala
+                onClick={() => openModal(index)}
               />
             ))}
         </div>
@@ -92,6 +92,7 @@ export default function ProjectPage() {
             images={data.image}
             onClose={closeModal}
             startIndex={modalIndex}
+            projectName={getValue(data.name)} // ✅ project name for modal
           />
         )}
 

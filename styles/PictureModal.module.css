@@ -28,6 +28,12 @@
   object-fit: contain;
   border-radius: 6px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.modal-image.loaded {
+  opacity: 1;
 }
 
 .caption {
@@ -75,13 +81,30 @@
   bottom: 12px;
   right: 12px;
   width: 90px;
-
   pointer-events: none;
 }
 
-/* Responsive */
+/* ✅ Project Name - vertically centered on left */
+.projectName {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+  text-align: left;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Responsive - TABLET */
 
 @media screen and (max-width: 768px) {
+  .modal-overlay {
+    display: none !important;
+  }
+
   .modal {
     padding: 10px;
     max-width: 95%;
@@ -106,13 +129,16 @@
     bottom: 10px;
     right: 10px;
   }
+
+  .projectName {
+    font-size: 1rem;
+    left: 16px;
+  }
 }
 
-@media screen and (max-width: 480px) {
-  .modal-overlay {
-    padding: 10px;
-  }
+/* Responsive - MOBILE */
 
+@media screen and (max-width: 480px) {
   .modal-image {
     max-height: 50vh;
   }
@@ -131,5 +157,10 @@
     width: 60px;
     bottom: 8px;
     right: 8px;
+  }
+
+  .projectName {
+    font-size: 0.95rem;
+    left: 12px;
   }
 }

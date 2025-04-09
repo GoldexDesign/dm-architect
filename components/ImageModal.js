@@ -1,14 +1,22 @@
 import React, { useEffect, useState, useCallback } from "react";
 import styles from "../styles/PictureModal.module.css";
 
-export default function ImageModal({ images, onClose, startIndex = 0 }) {
+export default function ImageModal({
+  images,
+  onClose,
+  startIndex = 0,
+  projectName,
+}) {
   const [currentIndex, setCurrentIndex] = useState(startIndex);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleNext = () => {
+    setImageLoaded(false);
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
   const handlePrev = () => {
+    setImageLoaded(false);
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
@@ -39,17 +47,23 @@ export default function ImageModal({ images, onClose, startIndex = 0 }) {
 
         {images.length > 0 && (
           <>
-            {/* ✅ re-render fix */}
             <img
               key={images[currentIndex]}
               src={images[currentIndex]}
               alt={`Image ${currentIndex + 1}`}
-              className={styles["modal-image"]}
+              className={`${styles["modal-image"]} ${
+                imageLoaded ? styles.loaded : ""
+              }`}
+              onLoad={() => setImageLoaded(true)}
             />
             <div className={styles.caption}>
               {`Image ${currentIndex + 1} of ${images.length}`}
             </div>
-            {/* ✅ DM Arhitekt Logo */}
+
+            {projectName && (
+              <div className={styles.projectName}>{projectName}</div>
+            )}
+
             <img
               src="/images/DM_logo.svg"
               alt="DM Arhitekt Logo"
