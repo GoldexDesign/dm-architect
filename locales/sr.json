@@ -19,5 +19,19 @@
   "projects": {
     "title": "O Studiju DM ARCHITECT",
     "description": "DM ARCHITECT je studio za dizajn enterijera fokusiran na vrhunske projekte..."
+  },
+  "categories": {
+    "retail": {
+      "title": "Maloprodajni Projekti",
+      "description": "Pregledajte enterijere maloprodajnih objekata u dizajnu DM ARCHITECTA – saloni, butici i koncept prodavnice."
+    },
+    "hotels": {
+      "title": "Hoteli",
+      "description": "Otkrijte funkcionalne i elegantne enterijere hotela koje je osmislio DM ARCHITECT."
+    },
+    "residential": {
+      "title": "Stambeni Projekti",
+      "description": "Pogledajte stambene prostore u kojima se spajaju funkcija, toplina i originalnost."
+    }
   }
 }

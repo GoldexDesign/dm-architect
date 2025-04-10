@@ -69,6 +69,11 @@ export default function CategoryProjectsPage() {
       ? t.menu.hotels
       : category;
 
+  const categorySEO = t.categories?.[category?.toLowerCase()] || {
+    title: categoryName,
+    description: `All ${categoryName} projects by DM ARCHITECT.`,
+  };
+
   return (
     <>
       {!showContent && (
@@ -88,11 +93,8 @@ export default function CategoryProjectsPage() {
       {showContent && (
         <div className={styles.container}>
           <Head>
-            <title>{categoryName} | DM ARCHITECT</title>
-            <meta
-              name="description"
-              content={`All ${categoryName} projects by DM ARCHITECT.`}
-            />
+            <title>{`${categorySEO.title} | DM ARCHITECT`}</title>
+            <meta name="description" content={categorySEO.description} />
           </Head>
 
           <main className={styles.main}>

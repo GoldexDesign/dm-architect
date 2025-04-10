@@ -132,3 +132,8 @@ html {
   font-weight: 300;
   opacity: 0.8;
 }
+/* SCROLL LOCK ZA MODAL */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}

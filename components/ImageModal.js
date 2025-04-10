@@ -9,6 +9,7 @@ export default function ImageModal({
 }) {
   const [currentIndex, setCurrentIndex] = useState(startIndex);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [showModal, setShowModal] = useState(true);
 
   const handleNext = () => {
     setImageLoaded(false);
@@ -34,9 +35,26 @@ export default function ImageModal({
   );
 
   useEffect(() => {
+    // ❗ Prevent modal on mobile portrait
+    if (typeof window !== "undefined") {
+      const isPortrait = window.innerHeight > window.innerWidth;
+      if (isPortrait) {
+        setShowModal(false);
+        onClose();
+        return;
+      }
+    }
+
     document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [handleKeyDown]);
+    document.body.classList.add("no-scroll");
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.classList.remove("no-scroll");
+    };
+  }, [handleKeyDown, onClose]);
+
+  if (!showModal) return null;
 
   return (
     <div className={styles["modal-overlay"]}>

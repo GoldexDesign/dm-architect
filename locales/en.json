@@ -19,5 +19,19 @@
   "projects": {
     "title": "About DM ARCHITECT",
     "description": "DM ARCHITECT is an interior design studio specializing in high-end projects..."
+  },
+  "categories": {
+    "retail": {
+      "title": "Retail Projects",
+      "description": "Explore DM ARCHITECT's unique retail interiors designed for premium showrooms, boutiques, and concept stores."
+    },
+    "hotels": {
+      "title": "Hotel Projects",
+      "description": "Discover elegant and functional hotel interiors by DM ARCHITECT."
+    },
+    "residential": {
+      "title": "Residential Projects",
+      "description": "Take a look at our thoughtfully designed residential spaces blending function and personality."
+    }
   }
 }
