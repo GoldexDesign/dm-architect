@@ -67,7 +67,32 @@ export default function ProjectPage() {
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Project",
+              name: getValue(data.name),
+              description: getValue(data.description),
+              image: data.image,
+              url: `https://dm-architect.vercel.app${router.asPath}`,
+              location: {
+                "@type": "Place",
+                address: getValue(data.location?.address || ""),
+              },
+              author: {
+                "@type": "Person",
+                name: data.author?.name,
+                affiliation: data.author?.affiliation,
+              },
+              dateCreated: data.year?.design,
+              datePublished: data.year?.construction,
+              contributor: data.participants?.map((p) => ({
+                "@type": "Person",
+                name: p.name,
+                jobTitle: p.role,
+              })),
+            }),
+          }}
         />
       </Head>
 
@@ -92,7 +117,7 @@ export default function ProjectPage() {
             images={data.image}
             onClose={closeModal}
             startIndex={modalIndex}
-            projectName={getValue(data.name)} // ✅ project name for modal
+            projectName={getValue(data.name)}
           />
         )}
 

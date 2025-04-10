@@ -68,7 +68,7 @@ export default function ImageModal({
             <img
               key={images[currentIndex]}
               src={images[currentIndex]}
-              alt={`Image ${currentIndex + 1}`}
+              alt={`${projectName} – Image ${currentIndex + 1}`}
               className={`${styles["modal-image"]} ${
                 imageLoaded ? styles.loaded : ""
               }`}

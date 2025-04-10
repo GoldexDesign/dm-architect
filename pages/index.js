@@ -20,19 +20,20 @@ export default function Home() {
     {
       id: "japanese-apartment",
       category: "residential",
-      name: "Japanese Apartment",
+      name: language === "sr" ? "Stan u japanskom stilu" : "Japanese Apartment",
       image: "/images/japanese-apartment/japanese-apartment-42.jpg",
     },
     {
       id: "fimas-showroom",
       category: "retail",
-      name: "Fimas Showroom",
+      name: language === "sr" ? "Fimas Šourum" : "Fimas Showroom",
       image: "/images/fimas-showroom/fimas-showroom-10.jpg",
     },
     {
       id: "enoteka-la-botilleria",
       category: "retail",
-      name: "Enoteka La Botilleria",
+      name:
+        language === "sr" ? "Enoteka La Botilerija" : "Enoteka La Botilleria",
       image: "/images/enoteka-la-botilleria/enoteka-la-botilleria-08.jpg",
     },
   ];
@@ -55,6 +56,8 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  const canonicalUrl = "https://dm-architect.vercel.app";
+
   return (
     <>
       {!showContent && (
@@ -76,13 +79,54 @@ export default function Home() {
           <Head>
             <title>DM ARCHITECT - Interior Design Studio</title>
             <meta name="description" content={t.home.description} />
+            <link rel="canonical" href={canonicalUrl} />
+
+            {/* Open Graph / Facebook */}
+            <meta property="og:type" content="website" />
+            <meta
+              property="og:title"
+              content="DM ARCHITECT - Interior Design Studio"
+            />
+            <meta property="og:description" content={t.home.description} />
             <meta
               property="og:image"
               content="https://dm-architect.vercel.app/images/social-preview.jpg"
             />
+            <meta property="og:url" content={canonicalUrl} />
+
+            {/* Twitter */}
+            <meta name="twitter:card" content="summary_large_image" />
             <meta
-              property="og:url"
-              content="https://dm-architect.vercel.app/"
+              name="twitter:title"
+              content="DM ARCHITECT - Interior Design Studio"
+            />
+            <meta name="twitter:description" content={t.home.description} />
+            <meta
+              name="twitter:image"
+              content="https://dm-architect.vercel.app/images/social-preview.jpg"
+            />
+
+            {/* JSON-LD Structured Data */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "WebSite",
+                  name: "DM ARCHITECT",
+                  url: canonicalUrl,
+                  description: t.home.description,
+                  sameAs: ["https://www.instagram.com/dm_architekt/"],
+                  publisher: {
+                    "@type": "Organization",
+                    name: "DM ARCHITECT",
+                    logo: {
+                      "@type": "ImageObject",
+                      url: "https://dm-architect.vercel.app/images/DM_logo.svg",
+                    },
+                  },
+                }),
+              }}
             />
           </Head>
 
