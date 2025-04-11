@@ -1,10 +1,19 @@
-export async function getServerSideProps({ res }) {
-  const response = await fetch("http://localhost:3000/api/sitemap");
-  const sitemap = await response.text();
+export async function getServerSideProps({ req, res }) {
+  const protocol = req.headers.host.includes("localhost") ? "http" : "https";
+  const baseUrl = `${protocol}://${req.headers.host}`;
 
-  res.setHeader("Content-Type", "application/xml");
-  res.write(sitemap);
-  res.end();
+  try {
+    const response = await fetch(`${baseUrl}/api/sitemap`);
+    const sitemap = await response.text();
+
+    res.setHeader("Content-Type", "application/xml");
+    res.write(sitemap);
+    res.end();
+  } catch (error) {
+    console.error("Failed to fetch sitemap:", error);
+    res.statusCode = 500;
+    res.end("Sitemap generation failed");
+  }
 
   return { props: {} };
 }

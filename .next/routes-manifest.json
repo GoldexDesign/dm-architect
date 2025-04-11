@@ -73,7 +73,7 @@
   "dataRoutes": [
     {
       "page": "/sitemap.xml",
-      "dataRouteRegex": "^/_next/data/qJpNtdi1kNzLsVMGV4YoH/sitemap.xml\\.json$"
+      "dataRouteRegex": "^/_next/data/iGWO464A\\-0Sr33S8qUOkj/sitemap.xml\\.json$"
     }
   ],
   "rsc": {
